@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using FloriculturaImperial.Camadas.ENT;
 using FloriculturaImperial.Camadas.NEG;
+using System.Reflection;
 
 namespace FloriculturaImperial
 {
@@ -26,13 +27,16 @@ namespace FloriculturaImperial
         public fmPrincipal()
         {
             InitializeComponent();
-            caminho = @"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\";
+            caminho = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "flie.txt");
+            //caminho = @"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\";
             tbVendasCadQtd.Text = "1";
             tbVendasCadQtd.Focus();
 
             listaTodasPlantas = nPlantas.selPlantas(null);
             listaTodasFotos = nFotos.selFotos(null);
             checkesVendas();
+
+            MessageBox.Show(caminho);
         }
 
 
