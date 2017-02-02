@@ -27,8 +27,8 @@ namespace FloriculturaImperial
         public fmPrincipal()
         {
             InitializeComponent();
-            caminho = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "flie.txt");
-            //caminho = @"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\";
+            //caminho = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "flie.txt");
+            caminho = @"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\";
             tbVendasCadQtd.Text = "1";
             tbVendasCadQtd.Focus();
 
@@ -36,7 +36,7 @@ namespace FloriculturaImperial
             listaTodasFotos = nFotos.selFotos(null);
             checkesVendas();
 
-            MessageBox.Show(caminho);
+            //MessageBox.Show(caminho);
         }
 
 
@@ -45,6 +45,8 @@ namespace FloriculturaImperial
         #region Metodos Vendas
         private void checkesVendas()
         {
+            lsVendasProdutos.Items.Clear();
+
             if (rbVendasSimples.Checked)
             {
                 if (listaTodasPlantas.Count > 0)
@@ -67,6 +69,8 @@ namespace FloriculturaImperial
 
         private void preenchadoSelecionados(string nome, bool isValorQtd)
         {
+            string caminhoImg = @"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\img_nao_disponivel.jpg";
+            int idPlanta = 0;
             if (!string.IsNullOrEmpty(nome))
             {
                 if(lsVendasProdutos.SelectedItems.Count > 0)
@@ -76,16 +80,40 @@ namespace FloriculturaImperial
                     listaPlanta.Clear();
                     for (int i = 0; i < lsVendasProdutos.SelectedItems.Count; i++)
                     {
+                        listaFoto.Clear();
                         lsVendasProdutos.SelectedItems[i].ToString();
                         if (listaTodasPlantas.Exists(c => c.Nome == lsVendasProdutos.SelectedItems[i].ToString()))
+                        {
                             listaPlanta.Add(listaTodasPlantas.Find(c => c.Nome == lsVendasProdutos.SelectedItems[i].ToString()));
+                            idPlanta = listaTodasPlantas.Find(c => c.Nome == lsVendasProdutos.SelectedItems[i].ToString()).Id;
+                            if(listaTodasFotos.Exists(c=>c.IdPlanta == idPlanta))
+                            {
+                                listaFoto.Add(listaTodasFotos.Find(c => c.IdPlanta == idPlanta));
+                                if (listaFoto.Count == 1)
+                                {
+                                    caminhoImg = listaFoto[0].Caminho;
+                                    pbImgVendaPlanta.Load(caminhoImg);
+                                }else
+                                {
+                                    pbImgVendaPlanta.Load(@"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\img_nao_disponivel.jpg");
+                                }
+                            }
 
-                        if (!lsVendasProdutos.Items.Contains(lsVendasProdutos.SelectedItems[i].ToString()))
-                            listaPlantaVenda.RemoveAll(c => c.Nome == lsVendasProdutos.SelectedItems[i].ToString());
-                        
+                        }                    
                     }
 
-                  
+                    for (int i = 0; i < lsVendasProdutos.Items.Count; i++)
+                    {
+
+                        if (!lsVendasProdutos.GetSelected(i))
+                        {
+                            if (listaPlantaVenda.Exists(c => c.Nome == lsVendasProdutos.Items[i].ToString()))
+                                listaPlantaVenda.RemoveAll(c => c.Nome == lsVendasProdutos.Items[i].ToString());
+                        }
+                    }
+                        
+
+
                     for (int i = 0; i< listaPlanta.Count; i++)
                     {
                         if (listaPlantaVenda.Exists(c => c.Nome == listaPlanta[i].Nome))
@@ -95,7 +123,9 @@ namespace FloriculturaImperial
                     for (int i = 0; i < listaPlanta.Count; i++)
                     {
                         if (!listaPlantaVenda.Exists(c => c.Nome == listaPlanta[i].Nome))
+                        {
                             PrecoTotal = PrecoTotal + float.Parse(listaPlanta[i].Preco);
+                        }
                     }
                     
 
@@ -116,7 +146,7 @@ namespace FloriculturaImperial
                         {
                             if (int.TryParse(tbVendasCadQtd.Text, out qtd))
                             {
-                                tbVendasPrecoTotal.Text = "R$ " + string.Format("{0:N2}", (PrecoTotal + (float.Parse(listaPlanta[0].Preco) * qtd)));
+                                tbVendasPrecoTotal.Text = "R$ " + string.Format("{0:N2}", (PrecoTotal * qtd));
                                 listaPlantaVenda.Add(new ePlantas { QtdVendida = qtd, Nome = nome });
                             }
                         }
@@ -136,9 +166,11 @@ namespace FloriculturaImperial
             }else
             {
                 tbVendasCadQtd.Text = "1";
-                tbVendasPreco.Text = "";
-                tbVendasPrecoTotal.Text = "";
+                tbVendasPreco.Text = "R$ 0,00";
+                tbVendasPrecoTotal.Text = "R$ 0,00";
+                pbImgVendaPlanta.Load(@"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\img_nao_disponivel.jpg");
             }
+
         }
 
         #endregion
@@ -178,8 +210,14 @@ namespace FloriculturaImperial
 
         private void lsVendasProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lsVendasProdutos.SelectedItems.Count > 0)
-           preenchadoSelecionados(lsVendasProdutos.SelectedItems[lsVendasProdutos.SelectedItems.Count-1].ToString(),false);
+            if (lsVendasProdutos.SelectedItems.Count <= 0)
+            {
+                preenchadoSelecionados(null, false);
+            }
+            else
+            {
+                preenchadoSelecionados(lsVendasProdutos.SelectedItems[lsVendasProdutos.SelectedItems.Count - 1].ToString(), false);
+            }
         }
 
         private void tbVendasCadQtd_TextChanged(object sender, EventArgs e)

@@ -912,6 +912,39 @@
   <data name="&gt;&gt;pnVendas.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="rbVendasBrinquedos.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbVendasBrinquedos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt</value>
+  </data>
+  <data name="rbVendasBrinquedos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rbVendasBrinquedos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 20</value>
+  </data>
+  <data name="rbVendasBrinquedos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="rbVendasBrinquedos.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rbVendasBrinquedos.Text" xml:space="preserve">
+    <value>Brinquedos</value>
+  </data>
+  <data name="&gt;&gt;rbVendasBrinquedos.Name" xml:space="preserve">
+    <value>rbVendasBrinquedos</value>
+  </data>
+  <data name="&gt;&gt;rbVendasBrinquedos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbVendasBrinquedos.Parent" xml:space="preserve">
+    <value>gbProdutos</value>
+  </data>
+  <data name="&gt;&gt;rbVendasBrinquedos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="rbVendasCestas.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2592,39 +2625,6 @@
   <metadata name="ofdImg.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="rbVendasBrinquedos.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbVendasBrinquedos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt</value>
-  </data>
-  <data name="rbVendasBrinquedos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rbVendasBrinquedos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="rbVendasBrinquedos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 20</value>
-  </data>
-  <data name="rbVendasBrinquedos.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="rbVendasBrinquedos.Text" xml:space="preserve">
-    <value>Brinquedos</value>
-  </data>
-  <data name="&gt;&gt;rbVendasBrinquedos.Name" xml:space="preserve">
-    <value>rbVendasBrinquedos</value>
-  </data>
-  <data name="&gt;&gt;rbVendasBrinquedos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbVendasBrinquedos.Parent" xml:space="preserve">
-    <value>gbProdutos</value>
-  </data>
-  <data name="&gt;&gt;rbVendasBrinquedos.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
