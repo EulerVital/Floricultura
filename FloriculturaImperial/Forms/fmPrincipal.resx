@@ -117,89 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btnEntrega.Name" xml:space="preserve">
-    <value>btnEntrega</value>
-  </data>
-  <data name="&gt;&gt;btnEntrega.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnEntrega.Parent" xml:space="preserve">
-    <value>pnBotoesPrincipais</value>
-  </data>
-  <data name="&gt;&gt;btnEntrega.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnPlantas.Name" xml:space="preserve">
-    <value>btnPlantas</value>
-  </data>
-  <data name="&gt;&gt;btnPlantas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantas.Parent" xml:space="preserve">
-    <value>pnBotoesPrincipais</value>
-  </data>
-  <data name="&gt;&gt;btnPlantas.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnBrinquedo.Name" xml:space="preserve">
-    <value>btnBrinquedo</value>
-  </data>
-  <data name="&gt;&gt;btnBrinquedo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnBrinquedo.Parent" xml:space="preserve">
-    <value>pnBotoesPrincipais</value>
-  </data>
-  <data name="&gt;&gt;btnBrinquedo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnCestas.Name" xml:space="preserve">
-    <value>btnCestas</value>
-  </data>
-  <data name="&gt;&gt;btnCestas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCestas.Parent" xml:space="preserve">
-    <value>pnBotoesPrincipais</value>
-  </data>
-  <data name="&gt;&gt;btnCestas.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnVendas.Name" xml:space="preserve">
-    <value>btnVendas</value>
-  </data>
-  <data name="&gt;&gt;btnVendas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnVendas.Parent" xml:space="preserve">
-    <value>pnBotoesPrincipais</value>
-  </data>
-  <data name="&gt;&gt;btnVendas.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pnBotoesPrincipais.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 37</value>
-  </data>
-  <data name="pnBotoesPrincipais.Size" type="System.Drawing.Size, System.Drawing">
-    <value>971, 77</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pnBotoesPrincipais.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;pnBotoesPrincipais.Name" xml:space="preserve">
-    <value>pnBotoesPrincipais</value>
-  </data>
-  <data name="&gt;&gt;pnBotoesPrincipais.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnBotoesPrincipais.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnBotoesPrincipais.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="btnEntrega.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
@@ -209,6 +127,7 @@
   <data name="btnEntrega.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 38</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnEntrega.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -334,6 +253,27 @@
   </data>
   <data name="&gt;&gt;btnVendas.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="pnBotoesPrincipais.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 37</value>
+  </data>
+  <data name="pnBotoesPrincipais.Size" type="System.Drawing.Size, System.Drawing">
+    <value>971, 77</value>
+  </data>
+  <data name="pnBotoesPrincipais.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;pnBotoesPrincipais.Name" xml:space="preserve">
+    <value>pnBotoesPrincipais</value>
+  </data>
+  <data name="&gt;&gt;pnBotoesPrincipais.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnBotoesPrincipais.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnBotoesPrincipais.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -651,6 +591,27 @@
   <data name="&gt;&gt;pbImgVendaPlanta.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="rbVendasBrinquedos.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbVendasBrinquedos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt</value>
+  </data>
+  <data name="rbVendasBrinquedos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rbVendasBrinquedos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 20</value>
+  </data>
+  <data name="rbVendasBrinquedos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="rbVendasBrinquedos.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rbVendasBrinquedos.Text" xml:space="preserve">
+    <value>Brinquedos</value>
+  </data>
   <data name="&gt;&gt;rbVendasBrinquedos.Name" xml:space="preserve">
     <value>rbVendasBrinquedos</value>
   </data>
@@ -663,6 +624,27 @@
   <data name="&gt;&gt;rbVendasBrinquedos.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="rbVendasCestas.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbVendasCestas.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt</value>
+  </data>
+  <data name="rbVendasCestas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rbVendasCestas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 21</value>
+  </data>
+  <data name="rbVendasCestas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="rbVendasCestas.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="rbVendasCestas.Text" xml:space="preserve">
+    <value>Cestas</value>
+  </data>
   <data name="&gt;&gt;rbVendasCestas.Name" xml:space="preserve">
     <value>rbVendasCestas</value>
   </data>
@@ -674,6 +656,24 @@
   </data>
   <data name="&gt;&gt;rbVendasCestas.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="rbVendasSimples.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbVendasSimples.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt</value>
+  </data>
+  <data name="rbVendasSimples.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="rbVendasSimples.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="rbVendasSimples.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="rbVendasSimples.Text" xml:space="preserve">
+    <value>Simples</value>
   </data>
   <data name="&gt;&gt;rbVendasSimples.Name" xml:space="preserve">
     <value>rbVendasSimples</value>
@@ -912,102 +912,6 @@
   <data name="&gt;&gt;pnVendas.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="rbVendasBrinquedos.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbVendasBrinquedos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt</value>
-  </data>
-  <data name="rbVendasBrinquedos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rbVendasBrinquedos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="rbVendasBrinquedos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 20</value>
-  </data>
-  <data name="rbVendasBrinquedos.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="rbVendasBrinquedos.Text" xml:space="preserve">
-    <value>Brinquedos</value>
-  </data>
-  <data name="&gt;&gt;rbVendasBrinquedos.Name" xml:space="preserve">
-    <value>rbVendasBrinquedos</value>
-  </data>
-  <data name="&gt;&gt;rbVendasBrinquedos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbVendasBrinquedos.Parent" xml:space="preserve">
-    <value>gbProdutos</value>
-  </data>
-  <data name="&gt;&gt;rbVendasBrinquedos.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="rbVendasCestas.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbVendasCestas.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt</value>
-  </data>
-  <data name="rbVendasCestas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rbVendasCestas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 21</value>
-  </data>
-  <data name="rbVendasCestas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 20</value>
-  </data>
-  <data name="rbVendasCestas.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="rbVendasCestas.Text" xml:space="preserve">
-    <value>Cestas</value>
-  </data>
-  <data name="&gt;&gt;rbVendasCestas.Name" xml:space="preserve">
-    <value>rbVendasCestas</value>
-  </data>
-  <data name="&gt;&gt;rbVendasCestas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbVendasCestas.Parent" xml:space="preserve">
-    <value>gbProdutos</value>
-  </data>
-  <data name="&gt;&gt;rbVendasCestas.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="rbVendasSimples.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbVendasSimples.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt</value>
-  </data>
-  <data name="rbVendasSimples.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
-  </data>
-  <data name="rbVendasSimples.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
-  </data>
-  <data name="rbVendasSimples.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="rbVendasSimples.Text" xml:space="preserve">
-    <value>Simples</value>
-  </data>
-  <data name="&gt;&gt;rbVendasSimples.Name" xml:space="preserve">
-    <value>rbVendasSimples</value>
-  </data>
-  <data name="&gt;&gt;rbVendasSimples.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbVendasSimples.Parent" xml:space="preserve">
-    <value>gbProdutos</value>
-  </data>
-  <data name="&gt;&gt;rbVendasSimples.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="lbTitulo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -1047,90 +951,6 @@
   <data name="&gt;&gt;lbTitulo.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;btnPlantaCons.Name" xml:space="preserve">
-    <value>btnPlantaCons</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCons.Parent" xml:space="preserve">
-    <value>pnPlantas</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCons.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasPrincipal.Name" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasPrincipal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasPrincipal.Parent" xml:space="preserve">
-    <value>pnPlantas</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasPrincipal.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaDeletar.Name" xml:space="preserve">
-    <value>btnPlantaDeletar</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaDeletar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaDeletar.Parent" xml:space="preserve">
-    <value>pnPlantas</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaDeletar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEditar.Name" xml:space="preserve">
-    <value>btnPlantaEditar</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEditar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEditar.Parent" xml:space="preserve">
-    <value>pnPlantas</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEditar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCad.Name" xml:space="preserve">
-    <value>btnPlantaCad</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCad.Parent" xml:space="preserve">
-    <value>pnPlantas</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCad.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="pnPlantas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 127</value>
-  </data>
-  <data name="pnPlantas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>965, 328</value>
-  </data>
-  <data name="pnPlantas.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="pnPlantas.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pnPlantas.Name" xml:space="preserve">
-    <value>pnPlantas</value>
-  </data>
-  <data name="&gt;&gt;pnPlantas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnPlantas.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnPlantas.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="btnPlantaCons.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
   </data>
@@ -1161,98 +981,23 @@
   <data name="&gt;&gt;btnPlantaCons.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pnPlantasImg.Name" xml:space="preserve">
-    <value>pnPlantasImg</value>
+  <data name="pbPlantaImg.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;pnPlantasImg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pbPlantaImg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;pnPlantasImg.Parent" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
+  <data name="pbPlantaImg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;pnPlantasImg.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="pbPlantaImg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 244</value>
   </data>
-  <data name="&gt;&gt;btnPlantaLimpaImg.Name" xml:space="preserve">
-    <value>btnPlantaLimpaImg</value>
+  <data name="pbPlantaImg.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
-  <data name="&gt;&gt;btnPlantaLimpaImg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaLimpaImg.Parent" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaLimpaImg.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaInsImg.Name" xml:space="preserve">
-    <value>btnPlantaInsImg</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaInsImg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaInsImg.Parent" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaInsImg.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasEditar.Name" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasEditar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasEditar.Parent" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasEditar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasCad.Name" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasCad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasCad.Parent" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasCad.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lsPlanta.Name" xml:space="preserve">
-    <value>lsPlanta</value>
-  </data>
-  <data name="&gt;&gt;lsPlanta.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lsPlanta.Parent" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
-  </data>
-  <data name="&gt;&gt;lsPlanta.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pnPlantasPrincipal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 9</value>
-  </data>
-  <data name="pnPlantasPrincipal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>806, 303</value>
-  </data>
-  <data name="pnPlantasPrincipal.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasPrincipal.Name" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasPrincipal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasPrincipal.Parent" xml:space="preserve">
-    <value>pnPlantas</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasPrincipal.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="pbPlantaImg.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;pbPlantaImg.Name" xml:space="preserve">
     <value>pbPlantaImg</value>
@@ -1285,36 +1030,6 @@
     <value>pnPlantasPrincipal</value>
   </data>
   <data name="&gt;&gt;pnPlantasImg.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pbPlantaImg.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="pbPlantaImg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pbPlantaImg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pbPlantaImg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 244</value>
-  </data>
-  <data name="pbPlantaImg.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pbPlantaImg.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;pbPlantaImg.Name" xml:space="preserve">
-    <value>pbPlantaImg</value>
-  </data>
-  <data name="&gt;&gt;pbPlantaImg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbPlantaImg.Parent" xml:space="preserve">
-    <value>pnPlantasImg</value>
-  </data>
-  <data name="&gt;&gt;pbPlantaImg.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btnPlantaLimpaImg.Font" type="System.Drawing.Font, System.Drawing">
@@ -1383,150 +1098,6 @@
   <data name="&gt;&gt;btnPlantaInsImg.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnPlantaEdtLimpa.Name" xml:space="preserve">
-    <value>btnPlantaEdtLimpa</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEdtLimpa.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEdtLimpa.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEdtLimpa.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEdtFinalizar.Name" xml:space="preserve">
-    <value>btnPlantaEdtFinalizar</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEdtFinalizar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEdtFinalizar.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaEdtFinalizar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;gbPlantaEdtEspecial.Name" xml:space="preserve">
-    <value>gbPlantaEdtEspecial</value>
-  </data>
-  <data name="&gt;&gt;gbPlantaEdtEspecial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbPlantaEdtEspecial.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;gbPlantaEdtEspecial.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtQtd.Name" xml:space="preserve">
-    <value>tbPlantaEdtQtd</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtQtd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtQtd.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtQtd.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtPreco.Name" xml:space="preserve">
-    <value>tbPlantaEdtPreco</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtPreco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtPreco.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtPreco.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtNome.Name" xml:space="preserve">
-    <value>tbPlantaEdtNome</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtNome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtNome.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaEdtNome.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
-  </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label11.Name" xml:space="preserve">
-    <value>label11</value>
-  </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="pnPlantasEditar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 6</value>
-  </data>
-  <data name="pnPlantasEditar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 287</value>
-  </data>
-  <data name="pnPlantasEditar.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="pnPlantasEditar.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasEditar.Name" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasEditar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasEditar.Parent" xml:space="preserve">
-    <value>pnPlantasPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnPlantasEditar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="btnPlantaEdtLimpa.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
   </data>
@@ -1586,57 +1157,6 @@
   </data>
   <data name="&gt;&gt;btnPlantaEdtFinalizar.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaEdtNao.Name" xml:space="preserve">
-    <value>rbPlantaEdtNao</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaEdtNao.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaEdtNao.Parent" xml:space="preserve">
-    <value>gbPlantaEdtEspecial</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaEdtNao.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaEdtSim.Name" xml:space="preserve">
-    <value>rbPlantaEdtSim</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaEdtSim.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaEdtSim.Parent" xml:space="preserve">
-    <value>gbPlantaEdtEspecial</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaEdtSim.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="gbPlantaEdtEspecial.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt, style=Bold</value>
-  </data>
-  <data name="gbPlantaEdtEspecial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 149</value>
-  </data>
-  <data name="gbPlantaEdtEspecial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 51</value>
-  </data>
-  <data name="gbPlantaEdtEspecial.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="gbPlantaEdtEspecial.Text" xml:space="preserve">
-    <value>ESPECIAL</value>
-  </data>
-  <data name="&gt;&gt;gbPlantaEdtEspecial.Name" xml:space="preserve">
-    <value>gbPlantaEdtEspecial</value>
-  </data>
-  <data name="&gt;&gt;gbPlantaEdtEspecial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbPlantaEdtEspecial.Parent" xml:space="preserve">
-    <value>pnPlantasEditar</value>
-  </data>
-  <data name="&gt;&gt;gbPlantaEdtEspecial.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="rbPlantaEdtNao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1703,6 +1223,33 @@
   </data>
   <data name="&gt;&gt;rbPlantaEdtSim.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="gbPlantaEdtEspecial.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11pt, style=Bold</value>
+  </data>
+  <data name="gbPlantaEdtEspecial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 149</value>
+  </data>
+  <data name="gbPlantaEdtEspecial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 51</value>
+  </data>
+  <data name="gbPlantaEdtEspecial.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="gbPlantaEdtEspecial.Text" xml:space="preserve">
+    <value>ESPECIAL</value>
+  </data>
+  <data name="&gt;&gt;gbPlantaEdtEspecial.Name" xml:space="preserve">
+    <value>gbPlantaEdtEspecial</value>
+  </data>
+  <data name="&gt;&gt;gbPlantaEdtEspecial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbPlantaEdtEspecial.Parent" xml:space="preserve">
+    <value>pnPlantasEditar</value>
+  </data>
+  <data name="&gt;&gt;gbPlantaEdtEspecial.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tbPlantaEdtQtd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1944,149 +1491,29 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;btnPlantaCadLimpa.Name" xml:space="preserve">
-    <value>btnPlantaCadLimpa</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCadLimpa.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCadLimpa.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCadLimpa.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCadFinalizar.Name" xml:space="preserve">
-    <value>btnPlantaCadFinalizar</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCadFinalizar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCadFinalizar.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;btnPlantaCadFinalizar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;gbPlantasCadEspecial.Name" xml:space="preserve">
-    <value>gbPlantasCadEspecial</value>
-  </data>
-  <data name="&gt;&gt;gbPlantasCadEspecial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbPlantasCadEspecial.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;gbPlantasCadEspecial.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaCadQtd.Name" xml:space="preserve">
-    <value>tbPlantaCadQtd</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaCadQtd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaCadQtd.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaCadQtd.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaCadPreco.Name" xml:space="preserve">
-    <value>tbPlantaCadPreco</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaCadPreco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaCadPreco.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;tbPlantaCadPreco.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tbPlantasCadNome.Name" xml:space="preserve">
-    <value>tbPlantasCadNome</value>
-  </data>
-  <data name="&gt;&gt;tbPlantasCadNome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPlantasCadNome.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;tbPlantasCadNome.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="pnPlantasCad.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pnPlantasEditar.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 6</value>
   </data>
-  <data name="pnPlantasCad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pnPlantasEditar.Size" type="System.Drawing.Size, System.Drawing">
     <value>312, 287</value>
   </data>
-  <data name="pnPlantasCad.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="pnPlantasEditar.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
   </data>
-  <data name="pnPlantasCad.Visible" type="System.Boolean, mscorlib">
+  <data name="pnPlantasEditar.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;pnPlantasCad.Name" xml:space="preserve">
-    <value>pnPlantasCad</value>
+  <data name="&gt;&gt;pnPlantasEditar.Name" xml:space="preserve">
+    <value>pnPlantasEditar</value>
   </data>
-  <data name="&gt;&gt;pnPlantasCad.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnPlantasEditar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnPlantasCad.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnPlantasEditar.Parent" xml:space="preserve">
     <value>pnPlantasPrincipal</value>
   </data>
-  <data name="&gt;&gt;pnPlantasCad.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;pnPlantasEditar.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnPlantaCadLimpa.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -2147,57 +1574,6 @@
   </data>
   <data name="&gt;&gt;btnPlantaCadFinalizar.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaCadNao.Name" xml:space="preserve">
-    <value>rbPlantaCadNao</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaCadNao.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaCadNao.Parent" xml:space="preserve">
-    <value>gbPlantasCadEspecial</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaCadNao.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaCadSim.Name" xml:space="preserve">
-    <value>rbPlantaCadSim</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaCadSim.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaCadSim.Parent" xml:space="preserve">
-    <value>gbPlantasCadEspecial</value>
-  </data>
-  <data name="&gt;&gt;rbPlantaCadSim.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="gbPlantasCadEspecial.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt, style=Bold</value>
-  </data>
-  <data name="gbPlantasCadEspecial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 149</value>
-  </data>
-  <data name="gbPlantasCadEspecial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 51</value>
-  </data>
-  <data name="gbPlantasCadEspecial.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="gbPlantasCadEspecial.Text" xml:space="preserve">
-    <value>ESPECIAL</value>
-  </data>
-  <data name="&gt;&gt;gbPlantasCadEspecial.Name" xml:space="preserve">
-    <value>gbPlantasCadEspecial</value>
-  </data>
-  <data name="&gt;&gt;gbPlantasCadEspecial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbPlantasCadEspecial.Parent" xml:space="preserve">
-    <value>pnPlantasCad</value>
-  </data>
-  <data name="&gt;&gt;gbPlantasCadEspecial.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="rbPlantaCadNao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2264,6 +1640,33 @@
   </data>
   <data name="&gt;&gt;rbPlantaCadSim.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="gbPlantasCadEspecial.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11pt, style=Bold</value>
+  </data>
+  <data name="gbPlantasCadEspecial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 149</value>
+  </data>
+  <data name="gbPlantasCadEspecial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 51</value>
+  </data>
+  <data name="gbPlantasCadEspecial.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="gbPlantasCadEspecial.Text" xml:space="preserve">
+    <value>ESPECIAL</value>
+  </data>
+  <data name="&gt;&gt;gbPlantasCadEspecial.Name" xml:space="preserve">
+    <value>gbPlantasCadEspecial</value>
+  </data>
+  <data name="&gt;&gt;gbPlantasCadEspecial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbPlantasCadEspecial.Parent" xml:space="preserve">
+    <value>pnPlantasCad</value>
+  </data>
+  <data name="&gt;&gt;gbPlantasCadEspecial.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tbPlantaCadQtd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -2505,6 +1908,30 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="pnPlantasCad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 6</value>
+  </data>
+  <data name="pnPlantasCad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 287</value>
+  </data>
+  <data name="pnPlantasCad.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="pnPlantasCad.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnPlantasCad.Name" xml:space="preserve">
+    <value>pnPlantasCad</value>
+  </data>
+  <data name="&gt;&gt;pnPlantasCad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnPlantasCad.Parent" xml:space="preserve">
+    <value>pnPlantasPrincipal</value>
+  </data>
+  <data name="&gt;&gt;pnPlantasCad.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="lsPlanta.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 11pt, style=Bold</value>
   </data>
@@ -2531,6 +1958,27 @@
   </data>
   <data name="&gt;&gt;lsPlanta.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="pnPlantasPrincipal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 9</value>
+  </data>
+  <data name="pnPlantasPrincipal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 303</value>
+  </data>
+  <data name="pnPlantasPrincipal.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;pnPlantasPrincipal.Name" xml:space="preserve">
+    <value>pnPlantasPrincipal</value>
+  </data>
+  <data name="&gt;&gt;pnPlantasPrincipal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnPlantasPrincipal.Parent" xml:space="preserve">
+    <value>pnPlantas</value>
+  </data>
+  <data name="&gt;&gt;pnPlantasPrincipal.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnPlantaDeletar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -2621,6 +2069,30 @@
   </data>
   <data name="&gt;&gt;btnPlantaCad.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="pnPlantas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 127</value>
+  </data>
+  <data name="pnPlantas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>965, 328</value>
+  </data>
+  <data name="pnPlantas.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="pnPlantas.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnPlantas.Name" xml:space="preserve">
+    <value>pnPlantas</value>
+  </data>
+  <data name="&gt;&gt;pnPlantas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnPlantas.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnPlantas.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="ofdImg.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

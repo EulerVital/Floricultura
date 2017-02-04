@@ -48,11 +48,14 @@
   <ItemGroup>
     <Compile Include="Camadas\DAO\dFotos.cs" />
     <Compile Include="Camadas\DAO\dPlantas.cs" />
+    <Compile Include="Camadas\DAO\dVendas.cs" />
     <Compile Include="Camadas\DAO\Util\duConexao.cs" />
     <Compile Include="Camadas\ENT\eFotos.cs" />
     <Compile Include="Camadas\ENT\ePlantas.cs" />
+    <Compile Include="Camadas\ENT\eVendas.cs" />
     <Compile Include="Camadas\NEG\nFotos.cs" />
     <Compile Include="Camadas\NEG\nPlantas.cs" />
+    <Compile Include="Camadas\NEG\nVendas.cs" />
     <Compile Include="Forms\fmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,9 +90,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Banco\Procedures\USP_DEL_PLANTA_FOTO.sql" />
+    <Content Include="Banco\Procedures\USP_INS_FOTO_PLANTA.sql" />
+    <Content Include="Banco\Procedures\USP_INS_PLANTAS.sql" />
+    <Content Include="Banco\Procedures\USP_SEL_FOTO_PLANTA.sql" />
+    <Content Include="Banco\Procedures\USP_SEL_PLANTAS.sql" />
+    <Content Include="Banco\Tabelas\TB_FOTOS_PLANTA.sql" />
+    <Content Include="Banco\Tabelas\TB_PLANTAS.sql" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="ImgApp\img_nao_disponivel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Banco\Funcoes\" />
+    <Folder Include="Banco\Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

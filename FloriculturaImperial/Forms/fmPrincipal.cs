@@ -11,6 +11,7 @@ using System.IO;
 using FloriculturaImperial.Camadas.ENT;
 using FloriculturaImperial.Camadas.NEG;
 using System.Reflection;
+using System.Xml;
 
 namespace FloriculturaImperial
 {
@@ -144,10 +145,19 @@ namespace FloriculturaImperial
                         }
                         else
                         {
+                            
                             if (int.TryParse(tbVendasCadQtd.Text, out qtd))
                             {
-                                tbVendasPrecoTotal.Text = "R$ " + string.Format("{0:N2}", (PrecoTotal * qtd));
-                                listaPlantaVenda.Add(new ePlantas { QtdVendida = qtd, Nome = nome });
+                                if (qtd <= listaPlanta[0].Qtd)
+                                {
+                                    tbVendasPrecoTotal.Text = "R$ " + string.Format("{0:N2}", (PrecoTotal * qtd));
+                                    listaPlantaVenda.Add(new ePlantas { QtdVendida = qtd, Nome = nome });
+                                }else
+                                {
+                                    MessageBox.Show("Quantidade menor do que à no estoque, pois então foi passado\n tudo o que havia. Qtd =" + listaPlanta[0].Qtd);
+                                    tbVendasPrecoTotal.Text = "R$ " + string.Format("{0:N2}", (PrecoTotal * listaPlanta[0].Qtd));
+                                    listaPlantaVenda.Add(new ePlantas { QtdVendida = listaPlanta[0].Qtd, Nome = nome });
+                                }
                             }
                         }
                     }else
@@ -174,6 +184,8 @@ namespace FloriculturaImperial
         }
 
         #endregion
+
+        #region Eventos
         private void btnVendas_Click(object sender, EventArgs e)
         {
             pnPlantas.Visible = false;
@@ -208,6 +220,107 @@ namespace FloriculturaImperial
             btnVendasFinalizar.BackColor = Color.Green;
         }
 
+        private void btnVendasFinalizar_Click(object sender, EventArgs e)
+        {
+            bool gravou1 = false, gravou2 = false;
+
+            if(lsVendasProdutos.SelectedItems.Count > 0)
+            {
+                if(lsVendasProdutos.Items.Count == listaTodasPlantas.Count)
+                {
+                    decimal PrecoTotal = 0;
+                    string[] Itens = new string[lsVendasProdutos.SelectedItems.Count]; 
+
+                    for (int i = 0; i < lsVendasProdutos.SelectedItems.Count; i++)
+                    {
+                        ePlantas planta = new ePlantas();
+                        decimal PrecoTotalPorFlor = 0;
+
+                        planta.Nome = lsVendasProdutos.SelectedItems[i].ToString();
+                        if (listaTodasPlantas.Exists(c => c.Nome == planta.Nome))
+                        {
+                            planta = listaTodasPlantas.Find(c => c.Nome == planta.Nome);
+                            
+                            if (listaPlantaVenda.Exists(c => c.Nome == planta.Nome))
+                            {
+                                planta.QtdVendida = listaPlantaVenda.Find(c => c.Nome == planta.Nome).QtdVendida;
+                                PrecoTotalPorFlor = decimal.Parse(planta.Preco) * planta.QtdVendida;
+                                if(listaTodasPlantas.Find(c => c.Nome == planta.Nome).Qtd > 0)
+                                    planta.Qtd = planta.Qtd - planta.QtdVendida;
+                            }else
+                            {
+                                planta.QtdVendida = 1;
+                                PrecoTotalPorFlor = decimal.Parse(planta.Preco) * planta.QtdVendida;
+                                planta.Qtd = planta.Qtd - 1;
+                            }
+                        }
+
+                        nPlantas.insPlantas(planta);
+                        eVendas vendasUnidade = new eVendas();
+
+                        vendasUnidade.Preco = PrecoTotalPorFlor;
+                        vendasUnidade.Produto = planta.Nome;
+                        vendasUnidade.QtdVendidas = planta.QtdVendida;
+                        vendasUnidade.QtdEstocadas = planta.Qtd;
+
+                        if (nVendas.insVendaProduto(vendasUnidade))
+                        {
+                            gravou1 = true;
+                        }
+                        
+                    }
+
+                    //Cadastrando Vendas Totais
+
+                    PrecoTotal = decimal.Parse(tbVendasPrecoTotal.Text.Replace("R$ ", ""));
+                    string ItensXml = string.Empty;
+                    string Auxilio = "<Produtos>";
+
+                    for (int i = 0; i < lsVendasProdutos.SelectedItems.Count; i++)
+                    {
+                        string Nome = lsVendasProdutos.SelectedItems[i].ToString();
+
+                        if (listaTodasPlantas.Exists(c => c.Nome == Nome))
+                        {
+                            if (listaPlantaVenda.Exists(c => c.Nome == Nome))
+                            {
+                                Itens[i] = string.Format("<NomeProduto" + (i+1) + ">{0}</NomeProduto" + (i + 1) + "><Preco" + (i + 1) + ">{1}</Preco" + (i + 1) + "><Qtd" + (i + 1) + ">{2}</Qtd" + (i + 1) + ">"
+                                , Nome, listaTodasPlantas.Find(c=>c.Nome == Nome).Preco, listaPlantaVenda.Find(c=>c.Nome == Nome).QtdVendida);
+                            }else
+                            {
+                                Itens[i] = string.Format("<NomeProduto" + (i + 1) + ">{0}</NomeProduto" + (i + 1) + "><Preco" + (i + 1) + ">{1}</Preco" + (i + 1) + "><Qtd" + (i + 1) + ">{2}</Qtd" + (i + 1) + ">"
+                                , Nome, listaTodasPlantas.Find(c => c.Nome == Nome).Preco, 1);
+                            }
+                        }
+                    }
+
+                    for(int i = 0; i < Itens.Length; i++)
+                    {
+                        ItensXml = ItensXml + Itens[i];
+                    }
+
+                    eVendas vendasTotal = new eVendas();
+
+                    vendasTotal.ProdutoXml = Auxilio + ItensXml + "</Produtos>";
+                    vendasTotal.PrecoTotal = PrecoTotal;
+                    vendasTotal.QtdProdutos = Itens.Length;
+
+                    if (nVendas.insVendaTotal(vendasTotal))
+                    {
+                        gravou2 = true;
+                    }
+
+                    if(gravou1 && gravou2)
+                    {
+                        MessageBox.Show("Venda Efetuada com sucesso", "Produtos Vendidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lsVendasProdutos.ClearSelected();
+                        checkesVendas();
+                        listaPlantaVenda.Clear();
+                    }
+                }
+            }
+        }
+
         private void lsVendasProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lsVendasProdutos.SelectedItems.Count <= 0)
@@ -220,15 +333,39 @@ namespace FloriculturaImperial
             }
         }
 
-        private void tbVendasCadQtd_TextChanged(object sender, EventArgs e)
+        private void tbVendasCadQtd_KeyDown(object sender, KeyEventArgs e)
         {
-            if (listaPlanta.Count > 0)
-                preenchadoSelecionados(listaPlanta[listaPlanta.Count - 1].Nome,true);
+            if (e.KeyData == Keys.Enter)
+            {
+                // Deabilita o campo para nao permitir prescionar o enter durante o processamento
+                (sender as TextBox).Enabled = false;
+
+                try
+                {
+                    if (listaPlanta.Count > 0)
+                        preenchadoSelecionados(listaPlanta[listaPlanta.Count - 1].Nome, true);
+                }
+                catch(Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    // Reabilita o campo (mesmo no caso de erros)
+                    (sender as TextBox).Enabled = true;
+                    // Nao propaga o precionamento da tecla enter (tira o beep)
+                    e.SuppressKeyPress = true;
+                }
+            }
         }
 
         #endregion
 
+        #endregion
+
         #region Plantas
+
+        #region Eventos
         private void btnPlantas_Click(object sender, EventArgs e)
         {
             pnVendas.Visible = false;
@@ -488,6 +625,8 @@ namespace FloriculturaImperial
             }
         }
 
+        #endregion
+
         #region Metodos Planta
         private void selecionarPlantas(string nome)
         {
@@ -599,6 +738,7 @@ namespace FloriculturaImperial
                 tbPlantaEdtNome.Focus();
             }
         }
+
 
 
         #endregion

@@ -1,0 +1,11 @@
+IF NOT EXISTS(select * from sys.tables where name = 'TB_FOTOS_PLANTA')
+BEGIN
+	CREATE TABLE TB_FOTOS_PLANTA
+	(
+		 Id INT PRIMARY KEY IDENTITY
+		,Caminho VARCHAR(2000)
+		,Status BIT
+		,IdPlanta INT FOREIGN KEY(IdPlanta) REFERENCES TB_PLANTAS
+	)
+END
+

@@ -1,0 +1,21 @@
+IF EXISTS(select * from  sys.procedures where name = 'USP_DEL_PLANTA_FOTO')
+BEGIN
+	DROP PROC USP_DEL_PLANTA_FOTO
+END
+GO
+
+CREATE PROC USP_DEL_PLANTA_FOTO
+	 @idPlanta INT = NULL
+	,@idFoto INT = NULL
+AS
+BEGIN
+	UPDATE TB_PLANTAS SET
+		Status = 0
+	WHERE
+		Id = @idPlanta
+
+	UPDATE TB_FOTOS_PLANTA SET
+		Status = 0
+	WHERE
+		Id = @idFoto
+END
