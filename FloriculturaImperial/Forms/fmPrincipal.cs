@@ -12,6 +12,7 @@ using FloriculturaImperial.Camadas.ENT;
 using FloriculturaImperial.Camadas.NEG;
 using System.Reflection;
 using System.Xml;
+using FloriculturaImperial.Forms.uc;
 
 namespace FloriculturaImperial
 {
@@ -24,6 +25,7 @@ namespace FloriculturaImperial
         static List<ePlantas> listaTodasPlantas = new List<ePlantas>();
         static List<eFotos> listaTodasFotos = new List<eFotos>();
         static List<ePlantas> listaPlantaVenda = new List<ePlantas>();
+        static List<eVendas> listaVendasRelatorio = new List<eVendas>();
 
         public fmPrincipal()
         {
@@ -66,6 +68,23 @@ namespace FloriculturaImperial
             {
 
             }
+        }
+
+        private void preenherRelatorio(eVendas venda)
+        {
+            if (listaVendasRelatorio.Count.Equals(dgvTabVendasGeral.RowCount))
+            {
+                dgvTabVendasGeral.DataSource = listaVendasRelatorio;
+            }
+            else
+            {
+                listaVendasRelatorio = nVendas.selRelatorioVendas(venda);
+                dgvTabVendasGeral.Rows.Clear();
+                for (int i = 0; i < listaVendasRelatorio.Count; i++)
+                    dgvTabVendasGeral.Rows.Add(listaVendasRelatorio[i].Id, listaVendasRelatorio[i].Produto, "R$ " + string.Format("{0:0.##}", listaVendasRelatorio[i].Preco)
+                        ,listaVendasRelatorio[i].QtdVendidas,listaVendasRelatorio[i].PorcentVendias + "%",listaVendasRelatorio[i].QtdEstocadas,listaVendasRelatorio[i].PorcentEstdocada + "%");
+            }
+
         }
 
         private void preenchadoSelecionados(string nome, bool isValorQtd)
@@ -199,6 +218,9 @@ namespace FloriculturaImperial
             pnCadVendas.Visible = false;
 
             pnTabGeral.Visible = true;
+            pnTabGeral.Controls.Clear();
+            pnTabGeral.Controls.Add(dgvTabVendasGeral);
+            preenherRelatorio(new eVendas());
         }
 
         private void btnVendasCad_Click(object sender, EventArgs e)
@@ -356,6 +378,15 @@ namespace FloriculturaImperial
                     // Nao propaga o precionamento da tecla enter (tira o beep)
                     e.SuppressKeyPress = true;
                 }
+            }
+        }
+
+        private void dgvTabVendasGeral_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvTabVendasGeral.SelectedRows != null)
+            {
+                pnTabGeral.Controls.Clear();
+                pnTabGeral.Controls.Add(new ucTabelaProdutos(dgvTabVendasGeral.SelectedCells[1].Value.ToString()));
             }
         }
 

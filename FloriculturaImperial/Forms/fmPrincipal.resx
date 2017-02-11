@@ -121,6 +121,10 @@
   <data name="btnEntrega.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnEntrega.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnEntrega.Location" type="System.Drawing.Point, System.Drawing">
     <value>816, 21</value>
   </data>
@@ -149,6 +153,9 @@
   <data name="btnPlantas.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
+  <data name="btnPlantas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnPlantas.Location" type="System.Drawing.Point, System.Drawing">
     <value>190, 21</value>
   </data>
@@ -175,6 +182,9 @@
   </data>
   <data name="btnBrinquedo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
+  </data>
+  <data name="btnBrinquedo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnBrinquedo.Location" type="System.Drawing.Point, System.Drawing">
     <value>615, 21</value>
@@ -203,6 +213,9 @@
   <data name="btnCestas.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
+  <data name="btnCestas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnCestas.Location" type="System.Drawing.Point, System.Drawing">
     <value>408, 21</value>
   </data>
@@ -229,6 +242,9 @@
   </data>
   <data name="btnVendas.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
+  </data>
+  <data name="btnVendas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnVendas.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 21</value>
@@ -282,18 +298,18 @@
     <value>Código</value>
   </data>
   <data name="Codigo.ToolTipText" xml:space="preserve">
-    <value>Código das Plantas</value>
+    <value>Código dos Produtos</value>
   </data>
   <data name="Codigo.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <metadata name="Plantas.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Produtos.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Plantas.HeaderText" xml:space="preserve">
+  <data name="Produtos.HeaderText" xml:space="preserve">
     <value>Plantas</value>
   </data>
-  <data name="Plantas.Width" type="System.Int32, mscorlib">
+  <data name="Produtos.Width" type="System.Int32, mscorlib">
     <value>250</value>
   </data>
   <metadata name="Preco.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -303,15 +319,15 @@
     <value>Preço</value>
   </data>
   <data name="Preco.Width" type="System.Int32, mscorlib">
-    <value>150</value>
+    <value>147</value>
   </data>
-  <metadata name="TotalVendidas.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="QtdVendidas.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="TotalVendidas.HeaderText" xml:space="preserve">
+  <data name="QtdVendidas.HeaderText" xml:space="preserve">
     <value>Vendidas</value>
   </data>
-  <data name="TotalVendidas.Width" type="System.Int32, mscorlib">
+  <data name="QtdVendidas.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <metadata name="PorcentVendidas.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -321,26 +337,22 @@
     <value>%</value>
   </data>
   <data name="PorcentVendidas.Width" type="System.Int32, mscorlib">
-    <value>60</value>
+    <value>65</value>
   </data>
-  <metadata name="TotalEstoque.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="QtdEstocada.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="TotalEstoque.HeaderText" xml:space="preserve">
+  <data name="QtdEstocada.HeaderText" xml:space="preserve">
     <value>Estouqe</value>
   </data>
-  <metadata name="PorcentEstoque.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PorcentEstocada.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="PorcentEstoque.HeaderText" xml:space="preserve">
+  <data name="PorcentEstocada.HeaderText" xml:space="preserve">
     <value>%</value>
   </data>
-  <data name="PorcentEstoque.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dgvTabVendasGeral.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="PorcentEstocada.Width" type="System.Int32, mscorlib">
+    <value>65</value>
   </data>
   <data name="dgvTabVendasGeral.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -543,6 +555,9 @@
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 11pt, style=Bold</value>
   </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>560, 25</value>
   </data>
@@ -566,6 +581,9 @@
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="pbImgVendaPlanta.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="pbImgVendaPlanta.Location" type="System.Drawing.Point, System.Drawing">
     <value>302, 14</value>
@@ -662,6 +680,9 @@
   </data>
   <data name="rbVendasSimples.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
+  </data>
+  <data name="rbVendasSimples.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="rbVendasSimples.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
@@ -786,6 +807,9 @@
   <data name="btnVendasGerarPdf.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
   </data>
+  <data name="btnVendasGerarPdf.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnVendasGerarPdf.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 233</value>
   </data>
@@ -812,6 +836,9 @@
   </data>
   <data name="btnVendaRelatorio.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
+  </data>
+  <data name="btnVendaRelatorio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnVendaRelatorio.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 155</value>
@@ -840,6 +867,9 @@
   <data name="btnVendasCad.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
   </data>
+  <data name="btnVendasCad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnVendasCad.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 5</value>
   </data>
@@ -866,6 +896,9 @@
   </data>
   <data name="btnVendasTabGeral.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
+  </data>
+  <data name="btnVendasTabGeral.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnVendasTabGeral.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 79</value>
@@ -923,6 +956,9 @@
   </data>
   <data name="lbTitulo.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
+  </data>
+  <data name="lbTitulo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbTitulo.Location" type="System.Drawing.Point, System.Drawing">
     <value>334, 3</value>
@@ -2109,8 +2145,17 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>986, 467</value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Floricultura Imperial</value>
+  </data>
+  <data name="&gt;&gt;ofdImg.Name" xml:space="preserve">
+    <value>ofdImg</value>
+  </data>
+  <data name="&gt;&gt;ofdImg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Codigo.Name" xml:space="preserve">
     <value>Codigo</value>
@@ -2118,10 +2163,10 @@
   <data name="&gt;&gt;Codigo.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Plantas.Name" xml:space="preserve">
-    <value>Plantas</value>
+  <data name="&gt;&gt;Produtos.Name" xml:space="preserve">
+    <value>Produtos</value>
   </data>
-  <data name="&gt;&gt;Plantas.Type" xml:space="preserve">
+  <data name="&gt;&gt;Produtos.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Preco.Name" xml:space="preserve">
@@ -2130,10 +2175,10 @@
   <data name="&gt;&gt;Preco.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TotalVendidas.Name" xml:space="preserve">
-    <value>TotalVendidas</value>
+  <data name="&gt;&gt;QtdVendidas.Name" xml:space="preserve">
+    <value>QtdVendidas</value>
   </data>
-  <data name="&gt;&gt;TotalVendidas.Type" xml:space="preserve">
+  <data name="&gt;&gt;QtdVendidas.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PorcentVendidas.Name" xml:space="preserve">
@@ -2142,23 +2187,17 @@
   <data name="&gt;&gt;PorcentVendidas.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TotalEstoque.Name" xml:space="preserve">
-    <value>TotalEstoque</value>
+  <data name="&gt;&gt;QtdEstocada.Name" xml:space="preserve">
+    <value>QtdEstocada</value>
   </data>
-  <data name="&gt;&gt;TotalEstoque.Type" xml:space="preserve">
+  <data name="&gt;&gt;QtdEstocada.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PorcentEstoque.Name" xml:space="preserve">
-    <value>PorcentEstoque</value>
+  <data name="&gt;&gt;PorcentEstocada.Name" xml:space="preserve">
+    <value>PorcentEstocada</value>
   </data>
-  <data name="&gt;&gt;PorcentEstoque.Type" xml:space="preserve">
+  <data name="&gt;&gt;PorcentEstocada.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ofdImg.Name" xml:space="preserve">
-    <value>ofdImg</value>
-  </data>
-  <data name="&gt;&gt;ofdImg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>fmPrincipal</value>

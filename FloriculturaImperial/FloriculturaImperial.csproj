@@ -62,10 +62,19 @@
     <Compile Include="Forms\fmPrincipal.Designer.cs">
       <DependentUpon>fmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\uc\ucTabelaProdutos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\uc\ucTabelaProdutos.Designer.cs">
+      <DependentUpon>ucTabelaProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\fmPrincipal.resx">
       <DependentUpon>fmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\uc\ucTabelaProdutos.resx">
+      <DependentUpon>ucTabelaProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,10 +103,16 @@
     <Content Include="Banco\Procedures\USP_DEL_PLANTA_FOTO.sql" />
     <Content Include="Banco\Procedures\USP_INS_FOTO_PLANTA.sql" />
     <Content Include="Banco\Procedures\USP_INS_PLANTAS.sql" />
+    <Content Include="Banco\Procedures\USP_INS_VENDAS_PRODUTOS.sql" />
+    <Content Include="Banco\Procedures\USP_INS_VENDAS_TOTAIS.sql" />
+    <Content Include="Banco\Procedures\USP_RELATORIO_VENDAS.sql" />
     <Content Include="Banco\Procedures\USP_SEL_FOTO_PLANTA.sql" />
     <Content Include="Banco\Procedures\USP_SEL_PLANTAS.sql" />
+    <Content Include="Banco\Procedures\USP_SEL_PRDUTOS_VENDIDOS.sql" />
     <Content Include="Banco\Tabelas\TB_FOTOS_PLANTA.sql" />
     <Content Include="Banco\Tabelas\TB_PLANTAS.sql" />
+    <Content Include="Banco\Tabelas\TB_VENDAS.sql" />
+    <Content Include="Banco\Tabelas\TB_VENDAS_TOTAL.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ImgApp\img_nao_disponivel.jpg" />

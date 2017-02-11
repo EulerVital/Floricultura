@@ -17,5 +17,9 @@ namespace FloriculturaImperial.Camadas.ENT
         public int QtdEstocadas { get; set; }
         public int QtdVendidas { get; set; }
         public int QtdProdutos { get; set; }
+        public DateTime Data { get; set; }
+
+        public string PorcentVendias { get; set; }
+        public string PorcentEstdocada { get; set; }
     }
 }
