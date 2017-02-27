@@ -33,12 +33,12 @@ namespace FloriculturaImperial.Camadas.NEG
             }
         }
 
-        public static List<eVendas> selRelatorioVendas(eVendas venda)
+        public static List<eVendas> selVendas(eVendas venda)
         {
             try
             {
                 dVendas db = new dVendas();
-                return db.selRelatorioVendas(venda);
+                return db.selVendas(venda);
             }
             catch (Exception ex)
             {
@@ -52,6 +52,19 @@ namespace FloriculturaImperial.Camadas.NEG
             {
                 dVendas db = new dVendas();
                 return db.selProdutosVendidos(id, produto);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static List<eVendas> selRelatorioVendas(DateTime? dataAte, DateTime? dataDe, string nomeProd, int? qtdMaior, decimal? preco)
+        {
+            try
+            {
+                dVendas db = new dVendas();
+                return db.selRelatorioVendas(dataAte,dataDe,nomeProd,qtdMaior,preco);
             }
             catch (Exception ex)
             {

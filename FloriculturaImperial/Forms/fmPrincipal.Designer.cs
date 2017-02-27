@@ -39,6 +39,13 @@
             this.btnCestas = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.dgvTabVendasGeral = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Produtos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QtdVendidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PorcentVendidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QtdEstocada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PorcentEstocada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnVendas = new System.Windows.Forms.Panel();
             this.pnCadVendas = new System.Windows.Forms.Panel();
             this.tbVendasCadQtd = new System.Windows.Forms.TextBox();
@@ -48,12 +55,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbVendasPrecoTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbImgVendaPlanta = new System.Windows.Forms.PictureBox();
             this.gbProdutos = new System.Windows.Forms.GroupBox();
             this.rbVendasBrinquedos = new System.Windows.Forms.RadioButton();
             this.rbVendasCestas = new System.Windows.Forms.RadioButton();
             this.rbVendasSimples = new System.Windows.Forms.RadioButton();
             this.lsVendasProdutos = new System.Windows.Forms.ListBox();
             this.pnTabGeral = new System.Windows.Forms.Panel();
+            this.pnVendasUc = new System.Windows.Forms.Panel();
             this.btnVendasGerarPdf = new System.Windows.Forms.Button();
             this.btnVendaRelatorio = new System.Windows.Forms.Button();
             this.btnVendasCad = new System.Windows.Forms.Button();
@@ -63,6 +72,7 @@
             this.btnPlantaCons = new System.Windows.Forms.Button();
             this.pnPlantasPrincipal = new System.Windows.Forms.Panel();
             this.pnPlantasImg = new System.Windows.Forms.Panel();
+            this.pbPlantaImg = new System.Windows.Forms.PictureBox();
             this.btnPlantaLimpaImg = new System.Windows.Forms.Button();
             this.btnPlantaInsImg = new System.Windows.Forms.Button();
             this.pnPlantasEditar = new System.Windows.Forms.Panel();
@@ -96,30 +106,21 @@
             this.btnPlantaEditar = new System.Windows.Forms.Button();
             this.btnPlantaCad = new System.Windows.Forms.Button();
             this.ofdImg = new System.Windows.Forms.OpenFileDialog();
-            this.pbImgVendaPlanta = new System.Windows.Forms.PictureBox();
-            this.pbPlantaImg = new System.Windows.Forms.PictureBox();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Produtos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QtdVendidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PorcentVendidas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QtdEstocada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PorcentEstocada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnBotoesPrincipais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabVendasGeral)).BeginInit();
             this.pnVendas.SuspendLayout();
             this.pnCadVendas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).BeginInit();
             this.gbProdutos.SuspendLayout();
             this.pnTabGeral.SuspendLayout();
             this.pnPlantas.SuspendLayout();
             this.pnPlantasPrincipal.SuspendLayout();
             this.pnPlantasImg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).BeginInit();
             this.pnPlantasEditar.SuspendLayout();
             this.gbPlantaEdtEspecial.SuspendLayout();
             this.pnPlantasCad.SuspendLayout();
             this.gbPlantasCadEspecial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).BeginInit();
             this.SuspendLayout();
             // 
             // pnBotoesPrincipais
@@ -213,11 +214,55 @@
             this.dgvTabVendasGeral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTabVendasGeral.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabVendasGeral_CellContentDoubleClick);
             // 
+            // Codigo
+            // 
+            resources.ApplyResources(this.Codigo, "Codigo");
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Produtos
+            // 
+            resources.ApplyResources(this.Produtos, "Produtos");
+            this.Produtos.Name = "Produtos";
+            this.Produtos.ReadOnly = true;
+            // 
+            // Preco
+            // 
+            resources.ApplyResources(this.Preco, "Preco");
+            this.Preco.Name = "Preco";
+            this.Preco.ReadOnly = true;
+            // 
+            // QtdVendidas
+            // 
+            resources.ApplyResources(this.QtdVendidas, "QtdVendidas");
+            this.QtdVendidas.Name = "QtdVendidas";
+            this.QtdVendidas.ReadOnly = true;
+            // 
+            // PorcentVendidas
+            // 
+            resources.ApplyResources(this.PorcentVendidas, "PorcentVendidas");
+            this.PorcentVendidas.Name = "PorcentVendidas";
+            this.PorcentVendidas.ReadOnly = true;
+            // 
+            // QtdEstocada
+            // 
+            resources.ApplyResources(this.QtdEstocada, "QtdEstocada");
+            this.QtdEstocada.Name = "QtdEstocada";
+            this.QtdEstocada.ReadOnly = true;
+            // 
+            // PorcentEstocada
+            // 
+            resources.ApplyResources(this.PorcentEstocada, "PorcentEstocada");
+            this.PorcentEstocada.Name = "PorcentEstocada";
+            this.PorcentEstocada.ReadOnly = true;
+            // 
             // pnVendas
             // 
             this.pnVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnVendas.Controls.Add(this.pnCadVendas);
             this.pnVendas.Controls.Add(this.pnTabGeral);
+            this.pnVendas.Controls.Add(this.pnVendasUc);
             this.pnVendas.Controls.Add(this.btnVendasGerarPdf);
             this.pnVendas.Controls.Add(this.btnVendaRelatorio);
             this.pnVendas.Controls.Add(this.btnVendasCad);
@@ -286,6 +331,12 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // pbImgVendaPlanta
+            // 
+            resources.ApplyResources(this.pbImgVendaPlanta, "pbImgVendaPlanta");
+            this.pbImgVendaPlanta.Name = "pbImgVendaPlanta";
+            this.pbImgVendaPlanta.TabStop = false;
+            // 
             // gbProdutos
             // 
             this.gbProdutos.Controls.Add(this.rbVendasBrinquedos);
@@ -332,6 +383,11 @@
             resources.ApplyResources(this.pnTabGeral, "pnTabGeral");
             this.pnTabGeral.Name = "pnTabGeral";
             // 
+            // pnVendasUc
+            // 
+            resources.ApplyResources(this.pnVendasUc, "pnVendasUc");
+            this.pnVendasUc.Name = "pnVendasUc";
+            // 
             // btnVendasGerarPdf
             // 
             this.btnVendasGerarPdf.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -345,6 +401,7 @@
             resources.ApplyResources(this.btnVendaRelatorio, "btnVendaRelatorio");
             this.btnVendaRelatorio.Name = "btnVendaRelatorio";
             this.btnVendaRelatorio.UseVisualStyleBackColor = false;
+            this.btnVendaRelatorio.Click += new System.EventHandler(this.btnVendaRelatorio_Click);
             // 
             // btnVendasCad
             // 
@@ -407,6 +464,13 @@
             this.pnPlantasImg.Controls.Add(this.pbPlantaImg);
             resources.ApplyResources(this.pnPlantasImg, "pnPlantasImg");
             this.pnPlantasImg.Name = "pnPlantasImg";
+            // 
+            // pbPlantaImg
+            // 
+            resources.ApplyResources(this.pbPlantaImg, "pbPlantaImg");
+            this.pbPlantaImg.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
+            this.pbPlantaImg.Name = "pbPlantaImg";
+            this.pbPlantaImg.TabStop = false;
             // 
             // btnPlantaLimpaImg
             // 
@@ -654,62 +718,6 @@
             // 
             this.ofdImg.FileName = "Img";
             // 
-            // pbImgVendaPlanta
-            // 
-            resources.ApplyResources(this.pbImgVendaPlanta, "pbImgVendaPlanta");
-            this.pbImgVendaPlanta.Name = "pbImgVendaPlanta";
-            this.pbImgVendaPlanta.TabStop = false;
-            // 
-            // pbPlantaImg
-            // 
-            resources.ApplyResources(this.pbPlantaImg, "pbPlantaImg");
-            this.pbPlantaImg.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
-            this.pbPlantaImg.Name = "pbPlantaImg";
-            this.pbPlantaImg.TabStop = false;
-            // 
-            // Codigo
-            // 
-            resources.ApplyResources(this.Codigo, "Codigo");
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Produtos
-            // 
-            resources.ApplyResources(this.Produtos, "Produtos");
-            this.Produtos.Name = "Produtos";
-            this.Produtos.ReadOnly = true;
-            // 
-            // Preco
-            // 
-            resources.ApplyResources(this.Preco, "Preco");
-            this.Preco.Name = "Preco";
-            this.Preco.ReadOnly = true;
-            // 
-            // QtdVendidas
-            // 
-            resources.ApplyResources(this.QtdVendidas, "QtdVendidas");
-            this.QtdVendidas.Name = "QtdVendidas";
-            this.QtdVendidas.ReadOnly = true;
-            // 
-            // PorcentVendidas
-            // 
-            resources.ApplyResources(this.PorcentVendidas, "PorcentVendidas");
-            this.PorcentVendidas.Name = "PorcentVendidas";
-            this.PorcentVendidas.ReadOnly = true;
-            // 
-            // QtdEstocada
-            // 
-            resources.ApplyResources(this.QtdEstocada, "QtdEstocada");
-            this.QtdEstocada.Name = "QtdEstocada";
-            this.QtdEstocada.ReadOnly = true;
-            // 
-            // PorcentEstocada
-            // 
-            resources.ApplyResources(this.PorcentEstocada, "PorcentEstocada");
-            this.PorcentEstocada.Name = "PorcentEstocada";
-            this.PorcentEstocada.ReadOnly = true;
-            // 
             // fmPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -726,12 +734,14 @@
             this.pnVendas.ResumeLayout(false);
             this.pnCadVendas.ResumeLayout(false);
             this.pnCadVendas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).EndInit();
             this.gbProdutos.ResumeLayout(false);
             this.gbProdutos.PerformLayout();
             this.pnTabGeral.ResumeLayout(false);
             this.pnPlantas.ResumeLayout(false);
             this.pnPlantasPrincipal.ResumeLayout(false);
             this.pnPlantasImg.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).EndInit();
             this.pnPlantasEditar.ResumeLayout(false);
             this.pnPlantasEditar.PerformLayout();
             this.gbPlantaEdtEspecial.ResumeLayout(false);
@@ -740,8 +750,6 @@
             this.pnPlantasCad.PerformLayout();
             this.gbPlantasCadEspecial.ResumeLayout(false);
             this.gbPlantasCadEspecial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -822,6 +830,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PorcentVendidas;
         private System.Windows.Forms.DataGridViewTextBoxColumn QtdEstocada;
         private System.Windows.Forms.DataGridViewTextBoxColumn PorcentEstocada;
+        private System.Windows.Forms.Panel pnVendasUc;
     }
 }
 

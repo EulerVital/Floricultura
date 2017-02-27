@@ -1,10 +1,10 @@
-IF EXISTS (select * from  sys.procedures where name = 'USP_RELATORIO_VENDAS')
+IF EXISTS (select * from  sys.procedures where name = 'USP_SEL_VENDAS')
 BEGIN
-	DROP PROC USP_RELATORIO_VENDAS
+	DROP PROC USP_SEL_VENDAS
 END
 GO
 
-CREATE PROC USP_RELATORIO_VENDAS
+CREATE PROC USP_SEL_VENDAS
 	 @Id INT = NULL
 	,@Produto VARCHAR(200) = NULL
 	,@Preco MONEY = NULL
@@ -34,10 +34,10 @@ BEGIN
 		 Produto
 		,SUM(Preco) Preco
 		,SUM(QtdVendidas) QtdVendidas
-		,SUM(QtdEstocada) QtdEstocada
+		,MIN(QtdEstocada) QtdEstocada
 	INTO #TEMP2
 	FROM
-		#TEMP1		
+		#TEMP1	
 	WHERE
 		Id = COALESCE(@Id,Id)
 	AND
@@ -47,7 +47,7 @@ BEGIN
 	AND
 		QtdEstocada = COALESCE(@QtdEstocada,QtdEstocada)
 	GROUP BY
-		Produto
+		 Produto
 
 	SELECT
 		 ROW_NUMBER() OVER(ORDER BY Produto  ASC) AS Codigo

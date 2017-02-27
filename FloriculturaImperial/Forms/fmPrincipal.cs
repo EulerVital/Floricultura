@@ -78,7 +78,7 @@ namespace FloriculturaImperial
             }
             else
             {
-                listaVendasRelatorio = nVendas.selRelatorioVendas(venda);
+                listaVendasRelatorio = nVendas.selVendas(venda);
                 dgvTabVendasGeral.Rows.Clear();
                 for (int i = 0; i < listaVendasRelatorio.Count; i++)
                     dgvTabVendasGeral.Rows.Add(listaVendasRelatorio[i].Id, listaVendasRelatorio[i].Produto, "R$ " + string.Format("{0:0.##}", listaVendasRelatorio[i].Preco)
@@ -216,6 +216,7 @@ namespace FloriculturaImperial
         private void btnTabVendasGeral_Click(object sender, EventArgs e)
         {
             pnCadVendas.Visible = false;
+            pnVendasUc.Visible = false;
 
             pnTabGeral.Visible = true;
             pnTabGeral.Controls.Clear();
@@ -226,8 +227,10 @@ namespace FloriculturaImperial
         private void btnVendasCad_Click(object sender, EventArgs e)
         {
             pnTabGeral.Visible = false;
+            pnVendasUc.Visible = false;
 
             pnCadVendas.Visible = true;
+            
         }
 
         private void btnVendasFinalizar_MouseHover(object sender, EventArgs e)
@@ -388,6 +391,16 @@ namespace FloriculturaImperial
                 pnTabGeral.Controls.Clear();
                 pnTabGeral.Controls.Add(new ucTabelaProdutos(dgvTabVendasGeral.SelectedCells[1].Value.ToString()));
             }
+        }
+
+        private void btnVendaRelatorio_Click(object sender, EventArgs e)
+        {
+            pnTabGeral.Visible = false;
+            pnCadVendas.Visible = false;
+
+            pnVendasUc.Visible = true;
+            pnVendasUc.Controls.Clear();
+            pnVendasUc.Controls.Add(new ucRelatorio());
         }
 
         #endregion
@@ -775,6 +788,5 @@ namespace FloriculturaImperial
         #endregion
 
         #endregion
-
     }
 }

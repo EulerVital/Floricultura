@@ -98,14 +98,14 @@ namespace FloriculturaImperial.Camadas.DAO
             return gravou;
         }
         
-        public List<eVendas> selRelatorioVendas(eVendas venda)
+        public List<eVendas> selVendas(eVendas venda)
         {
             objSqlCom = new SqlCommand();
             objSqlConect = new SqlConnection();
             con = new duConexao();
             List<eVendas> lista = new List<eVendas>();
 
-            objSqlCom.CommandText = "USP_RELATORIO_VENDAS";
+            objSqlCom.CommandText = "USP_SEL_VENDAS";
             objSqlCom.CommandType = CommandType.StoredProcedure;
 
             if (venda.Id == 0)
@@ -140,7 +140,7 @@ namespace FloriculturaImperial.Camadas.DAO
                 if (dr.HasRows)
                 {
                     while (dr.Read())
-                       lista.Add(SetarObjetoRelatorio(venda, dr));
+                       lista.Add(SetarObjetoVendas(venda, dr));
                 }
                 return lista;
             }
@@ -157,7 +157,7 @@ namespace FloriculturaImperial.Camadas.DAO
             }
         }
 
-        private eVendas SetarObjetoRelatorio(eVendas venda, SqlDataReader dr)
+        private eVendas SetarObjetoVendas(eVendas venda, SqlDataReader dr)
         {
             eVendas ItensVendas = new eVendas();
 
@@ -182,7 +182,7 @@ namespace FloriculturaImperial.Camadas.DAO
             objSqlCom.Parameters.AddWithValue("@Id", id);
             objSqlCom.Parameters.AddWithValue("@Produto", produto);
 
-            objSqlCom.CommandText = "USP_SEL_PRDUTOS_VENDIDOS";
+            objSqlCom.CommandText = "USP_SEL_PRODUTOS_VENDIDOS";
             objSqlCom.CommandType = CommandType.StoredProcedure;
             objSqlConect = con.abrirConexao();
             objSqlCom.Connection = objSqlConect;
@@ -225,6 +225,65 @@ namespace FloriculturaImperial.Camadas.DAO
             vend.Data = Convert.ToDateTime(dr["Data"]);
 
             return vend;
+        }
+
+        public List<eVendas> selRelatorioVendas(DateTime? dataAte, DateTime? dataDe, string nomeProd, int? qtdMaior, decimal? preco)
+        {
+            objSqlCom = new SqlCommand();
+            objSqlConect = new SqlConnection();
+            con = new duConexao();
+            List<eVendas> lista = new List<eVendas>();
+
+            objSqlCom.CommandText = "USP_SEL_RELATORIO_VENDAS";
+            objSqlCom.CommandType = CommandType.StoredProcedure;
+
+            objSqlCom.Parameters.AddWithValue("@Id", null);
+            objSqlCom.Parameters.AddWithValue("@Produtos", nomeProd);
+            objSqlCom.Parameters.AddWithValue("@PrecoTotal", preco);
+            objSqlCom.Parameters.AddWithValue("@QtdProdutos", qtdMaior);
+            objSqlCom.Parameters.AddWithValue("@DataDe", dataDe);
+            objSqlCom.Parameters.AddWithValue("@DataAte", dataAte);
+
+
+            objSqlConect = con.abrirConexao();
+            objSqlCom.Connection = objSqlConect;
+
+            dr = objSqlCom.ExecuteReader();
+
+            try
+            {
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                        lista.Add(SetarObjetoRelatorio(dr));
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                objSqlCom.Dispose();
+                objSqlConect.Close();
+                objSqlConect = null;
+                objSqlCom = null;
+            }
+        }
+
+        private eVendas SetarObjetoRelatorio(SqlDataReader dr)
+        {
+            eVendas venda = new eVendas();
+
+            venda.Id = int.Parse(dr["Codigo"].ToString());
+            venda.ProdutoXml = dr["Produtos"].ToString();
+            venda.PrecoTotal = decimal.Parse(dr["PrecoTotal"].ToString());
+            venda.QtdVendidas = int.Parse(dr["QtdProdutos"].ToString());
+            venda.Data = Convert.ToDateTime(dr["Data"]);
+
+            return venda;
         }
     }
 }

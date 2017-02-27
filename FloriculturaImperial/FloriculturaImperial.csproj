@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Dlls\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,11 +62,23 @@
     <Compile Include="Camadas\NEG\nFotos.cs" />
     <Compile Include="Camadas\NEG\nPlantas.cs" />
     <Compile Include="Camadas\NEG\nVendas.cs" />
+    <Compile Include="Forms\fmExportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fmExportar.Designer.cs">
+      <DependentUpon>fmExportar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\fmPrincipal.Designer.cs">
       <DependentUpon>fmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\uc\ucRelatorio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\uc\ucRelatorio.Designer.cs">
+      <DependentUpon>ucRelatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\uc\ucTabelaProdutos.cs">
       <SubType>UserControl</SubType>
@@ -70,8 +88,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\fmExportar.resx">
+      <DependentUpon>fmExportar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fmPrincipal.resx">
       <DependentUpon>fmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\uc\ucRelatorio.resx">
+      <DependentUpon>ucRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\uc\ucTabelaProdutos.resx">
       <DependentUpon>ucTabelaProdutos.cs</DependentUpon>
@@ -105,14 +129,15 @@
     <Content Include="Banco\Procedures\USP_INS_PLANTAS.sql" />
     <Content Include="Banco\Procedures\USP_INS_VENDAS_PRODUTOS.sql" />
     <Content Include="Banco\Procedures\USP_INS_VENDAS_TOTAIS.sql" />
-    <Content Include="Banco\Procedures\USP_RELATORIO_VENDAS.sql" />
     <Content Include="Banco\Procedures\USP_SEL_FOTO_PLANTA.sql" />
     <Content Include="Banco\Procedures\USP_SEL_PLANTAS.sql" />
     <Content Include="Banco\Procedures\USP_SEL_PRDUTOS_VENDIDOS.sql" />
+    <Content Include="Banco\Procedures\USP_SEL_VENDAS.sql" />
     <Content Include="Banco\Tabelas\TB_FOTOS_PLANTA.sql" />
     <Content Include="Banco\Tabelas\TB_PLANTAS.sql" />
     <Content Include="Banco\Tabelas\TB_VENDAS.sql" />
     <Content Include="Banco\Tabelas\TB_VENDAS_TOTAL.sql" />
+    <Content Include="ImgApp\Excel-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ImgApp\img_nao_disponivel.jpg" />
@@ -120,6 +145,9 @@
   <ItemGroup>
     <Folder Include="Banco\Funcoes\" />
     <Folder Include="Banco\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
