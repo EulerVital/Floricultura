@@ -55,7 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbVendasPrecoTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbImgVendaPlanta = new System.Windows.Forms.PictureBox();
             this.gbProdutos = new System.Windows.Forms.GroupBox();
             this.rbVendasBrinquedos = new System.Windows.Forms.RadioButton();
             this.rbVendasCestas = new System.Windows.Forms.RadioButton();
@@ -72,7 +71,6 @@
             this.btnPlantaCons = new System.Windows.Forms.Button();
             this.pnPlantasPrincipal = new System.Windows.Forms.Panel();
             this.pnPlantasImg = new System.Windows.Forms.Panel();
-            this.pbPlantaImg = new System.Windows.Forms.PictureBox();
             this.btnPlantaLimpaImg = new System.Windows.Forms.Button();
             this.btnPlantaInsImg = new System.Windows.Forms.Button();
             this.pnPlantasEditar = new System.Windows.Forms.Panel();
@@ -106,21 +104,23 @@
             this.btnPlantaEditar = new System.Windows.Forms.Button();
             this.btnPlantaCad = new System.Windows.Forms.Button();
             this.ofdImg = new System.Windows.Forms.OpenFileDialog();
+            this.pbImgVendaPlanta = new System.Windows.Forms.PictureBox();
+            this.pbPlantaImg = new System.Windows.Forms.PictureBox();
             this.pnBotoesPrincipais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabVendasGeral)).BeginInit();
             this.pnVendas.SuspendLayout();
             this.pnCadVendas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).BeginInit();
             this.gbProdutos.SuspendLayout();
             this.pnTabGeral.SuspendLayout();
             this.pnPlantas.SuspendLayout();
             this.pnPlantasPrincipal.SuspendLayout();
             this.pnPlantasImg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).BeginInit();
             this.pnPlantasEditar.SuspendLayout();
             this.gbPlantaEdtEspecial.SuspendLayout();
             this.pnPlantasCad.SuspendLayout();
             this.gbPlantasCadEspecial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).BeginInit();
             this.SuspendLayout();
             // 
             // pnBotoesPrincipais
@@ -331,12 +331,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // pbImgVendaPlanta
-            // 
-            resources.ApplyResources(this.pbImgVendaPlanta, "pbImgVendaPlanta");
-            this.pbImgVendaPlanta.Name = "pbImgVendaPlanta";
-            this.pbImgVendaPlanta.TabStop = false;
-            // 
             // gbProdutos
             // 
             this.gbProdutos.Controls.Add(this.rbVendasBrinquedos);
@@ -464,13 +458,6 @@
             this.pnPlantasImg.Controls.Add(this.pbPlantaImg);
             resources.ApplyResources(this.pnPlantasImg, "pnPlantasImg");
             this.pnPlantasImg.Name = "pnPlantasImg";
-            // 
-            // pbPlantaImg
-            // 
-            resources.ApplyResources(this.pbPlantaImg, "pbPlantaImg");
-            this.pbPlantaImg.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
-            this.pbPlantaImg.Name = "pbPlantaImg";
-            this.pbPlantaImg.TabStop = false;
             // 
             // btnPlantaLimpaImg
             // 
@@ -718,6 +705,20 @@
             // 
             this.ofdImg.FileName = "Img";
             // 
+            // pbImgVendaPlanta
+            // 
+            this.pbImgVendaPlanta.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
+            resources.ApplyResources(this.pbImgVendaPlanta, "pbImgVendaPlanta");
+            this.pbImgVendaPlanta.Name = "pbImgVendaPlanta";
+            this.pbImgVendaPlanta.TabStop = false;
+            // 
+            // pbPlantaImg
+            // 
+            resources.ApplyResources(this.pbPlantaImg, "pbPlantaImg");
+            this.pbPlantaImg.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
+            this.pbPlantaImg.Name = "pbPlantaImg";
+            this.pbPlantaImg.TabStop = false;
+            // 
             // fmPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -734,14 +735,12 @@
             this.pnVendas.ResumeLayout(false);
             this.pnCadVendas.ResumeLayout(false);
             this.pnCadVendas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).EndInit();
             this.gbProdutos.ResumeLayout(false);
             this.gbProdutos.PerformLayout();
             this.pnTabGeral.ResumeLayout(false);
             this.pnPlantas.ResumeLayout(false);
             this.pnPlantasPrincipal.ResumeLayout(false);
             this.pnPlantasImg.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).EndInit();
             this.pnPlantasEditar.ResumeLayout(false);
             this.pnPlantasEditar.PerformLayout();
             this.gbPlantaEdtEspecial.ResumeLayout(false);
@@ -750,6 +749,8 @@
             this.pnPlantasCad.PerformLayout();
             this.gbPlantasCadEspecial.ResumeLayout(false);
             this.gbPlantasCadEspecial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

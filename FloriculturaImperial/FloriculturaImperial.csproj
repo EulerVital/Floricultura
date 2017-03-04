@@ -62,12 +62,6 @@
     <Compile Include="Camadas\NEG\nFotos.cs" />
     <Compile Include="Camadas\NEG\nPlantas.cs" />
     <Compile Include="Camadas\NEG\nVendas.cs" />
-    <Compile Include="Forms\fmExportar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\fmExportar.Designer.cs">
-      <DependentUpon>fmExportar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\fmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,9 +82,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\fmExportar.resx">
-      <DependentUpon>fmExportar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fmPrincipal.resx">
       <DependentUpon>fmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,7 +128,10 @@
     <Content Include="Banco\Tabelas\TB_PLANTAS.sql" />
     <Content Include="Banco\Tabelas\TB_VENDAS.sql" />
     <Content Include="Banco\Tabelas\TB_VENDAS_TOTAL.sql" />
-    <Content Include="ImgApp\Excel-icon.png" />
+    <None Include="Resources\salva-icon.png" />
+    <None Include="Resources\pdf-icon.png" />
+    <None Include="Resources\excel-icon1.png" />
+    <None Include="Resources\excel-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ImgApp\img_nao_disponivel.jpg" />

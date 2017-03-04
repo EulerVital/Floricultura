@@ -71,6 +71,7 @@
             this.dgvProdutosVendidos.Location = new System.Drawing.Point(0, 0);
             this.dgvProdutosVendidos.MultiSelect = false;
             this.dgvProdutosVendidos.Name = "dgvProdutosVendidos";
+            this.dgvProdutosVendidos.ReadOnly = true;
             this.dgvProdutosVendidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProdutosVendidos.Size = new System.Drawing.Size(834, 308);
             this.dgvProdutosVendidos.TabIndex = 0;
@@ -85,6 +86,7 @@
             this.Codigo.DefaultCellStyle = dataGridViewCellStyle2;
             this.Codigo.HeaderText = "Código";
             this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
             this.Codigo.ToolTipText = "Código do Produto";
             // 
             // Produto
@@ -97,6 +99,7 @@
             this.Produto.DefaultCellStyle = dataGridViewCellStyle3;
             this.Produto.HeaderText = "Produto";
             this.Produto.Name = "Produto";
+            this.Produto.ReadOnly = true;
             this.Produto.ToolTipText = "Produto";
             this.Produto.Width = 200;
             // 
@@ -110,6 +113,7 @@
             this.Preco.DefaultCellStyle = dataGridViewCellStyle4;
             this.Preco.HeaderText = "Preço";
             this.Preco.Name = "Preco";
+            this.Preco.ReadOnly = true;
             this.Preco.ToolTipText = "Preço do Produto";
             this.Preco.Width = 146;
             // 
@@ -123,6 +127,7 @@
             this.QtdVendidas.DefaultCellStyle = dataGridViewCellStyle5;
             this.QtdVendidas.HeaderText = "Vendidas";
             this.QtdVendidas.Name = "QtdVendidas";
+            this.QtdVendidas.ReadOnly = true;
             this.QtdVendidas.ToolTipText = "Quantidade Vendidas";
             // 
             // QtdEstocada
@@ -135,6 +140,7 @@
             this.QtdEstocada.DefaultCellStyle = dataGridViewCellStyle6;
             this.QtdEstocada.HeaderText = "Estocadas";
             this.QtdEstocada.Name = "QtdEstocada";
+            this.QtdEstocada.ReadOnly = true;
             this.QtdEstocada.ToolTipText = "Quantidades Estocadas";
             // 
             // Data
@@ -147,6 +153,7 @@
             this.Data.DefaultCellStyle = dataGridViewCellStyle7;
             this.Data.HeaderText = "Data Vendida";
             this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
             this.Data.Width = 145;
             // 
             // ucTabelaProdutos
