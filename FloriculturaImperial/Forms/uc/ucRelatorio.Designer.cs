@@ -44,20 +44,21 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pbExportSalvar = new System.Windows.Forms.PictureBox();
-            this.pbExportPdf = new System.Windows.Forms.PictureBox();
-            this.pbExportExcel = new System.Windows.Forms.PictureBox();
             this.dgvRelatorio = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QtdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.pbExportSalvar = new System.Windows.Forms.PictureBox();
+            this.pbExportPdf = new System.Windows.Forms.PictureBox();
+            this.pbExportExcel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExportSalvar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExportPdf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExportExcel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorio)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -122,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 54);
+            this.label4.Location = new System.Drawing.Point(9, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(193, 20);
             this.label4.TabIndex = 6;
@@ -131,74 +132,29 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(203, 52);
+            this.numericUpDown1.Location = new System.Drawing.Point(13, 68);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDown1.Size = new System.Drawing.Size(71, 25);
             this.numericUpDown1.TabIndex = 7;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(473, 52);
+            this.textBox1.Location = new System.Drawing.Point(212, 68);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 25);
+            this.textBox1.Size = new System.Drawing.Size(206, 25);
             this.textBox1.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(262, 54);
+            this.label5.Location = new System.Drawing.Point(208, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(210, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "RETORNAR PREÇO MAIOR QUE: ";
-            // 
-            // pbExportSalvar
-            // 
-            this.pbExportSalvar.BackColor = System.Drawing.Color.White;
-            this.pbExportSalvar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbExportSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbExportSalvar.Image = global::FloriculturaImperial.Properties.Resources.salva_icon;
-            this.pbExportSalvar.Location = new System.Drawing.Point(780, 47);
-            this.pbExportSalvar.Name = "pbExportSalvar";
-            this.pbExportSalvar.Size = new System.Drawing.Size(47, 33);
-            this.pbExportSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExportSalvar.TabIndex = 13;
-            this.pbExportSalvar.TabStop = false;
-            this.pbExportSalvar.MouseLeave += new System.EventHandler(this.pbExportSalvar_MouseLeave);
-            this.pbExportSalvar.MouseHover += new System.EventHandler(this.pbExportSalvar_MouseHover);
-            // 
-            // pbExportPdf
-            // 
-            this.pbExportPdf.BackColor = System.Drawing.Color.White;
-            this.pbExportPdf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbExportPdf.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbExportPdf.Image = global::FloriculturaImperial.Properties.Resources.pdf_icon;
-            this.pbExportPdf.Location = new System.Drawing.Point(715, 47);
-            this.pbExportPdf.Name = "pbExportPdf";
-            this.pbExportPdf.Size = new System.Drawing.Size(44, 33);
-            this.pbExportPdf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExportPdf.TabIndex = 11;
-            this.pbExportPdf.TabStop = false;
-            this.pbExportPdf.MouseLeave += new System.EventHandler(this.pbExportPdf_MouseLeave);
-            this.pbExportPdf.MouseHover += new System.EventHandler(this.pbExportPdf_MouseHover);
-            // 
-            // pbExportExcel
-            // 
-            this.pbExportExcel.BackColor = System.Drawing.Color.White;
-            this.pbExportExcel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbExportExcel.Image = global::FloriculturaImperial.Properties.Resources.excel_icon1;
-            this.pbExportExcel.Location = new System.Drawing.Point(652, 46);
-            this.pbExportExcel.Name = "pbExportExcel";
-            this.pbExportExcel.Size = new System.Drawing.Size(42, 35);
-            this.pbExportExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExportExcel.TabIndex = 10;
-            this.pbExportExcel.TabStop = false;
-            this.pbExportExcel.MouseLeave += new System.EventHandler(this.pbExportExcel_MouseLeave);
-            this.pbExportExcel.MouseHover += new System.EventHandler(this.pbExportExcel_MouseHover);
             // 
             // dgvRelatorio
             // 
@@ -298,11 +254,71 @@
             this.Data.ReadOnly = true;
             this.Data.Width = 145;
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.BackgroundImage = global::FloriculturaImperial.Properties.Resources.pesquisa;
+            this.btnPesquisar.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(438, 51);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(126, 35);
+            this.btnPesquisar.TabIndex = 15;
+            this.btnPesquisar.Text = "PESQUISAR";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // pbExportSalvar
+            // 
+            this.pbExportSalvar.BackColor = System.Drawing.Color.White;
+            this.pbExportSalvar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbExportSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExportSalvar.Image = global::FloriculturaImperial.Properties.Resources.salva_icon;
+            this.pbExportSalvar.Location = new System.Drawing.Point(780, 50);
+            this.pbExportSalvar.Name = "pbExportSalvar";
+            this.pbExportSalvar.Size = new System.Drawing.Size(47, 33);
+            this.pbExportSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExportSalvar.TabIndex = 13;
+            this.pbExportSalvar.TabStop = false;
+            this.pbExportSalvar.Click += new System.EventHandler(this.pbExportSalvar_Click);
+            this.pbExportSalvar.MouseLeave += new System.EventHandler(this.pbExportSalvar_MouseLeave);
+            this.pbExportSalvar.MouseHover += new System.EventHandler(this.pbExportSalvar_MouseHover);
+            // 
+            // pbExportPdf
+            // 
+            this.pbExportPdf.BackColor = System.Drawing.Color.White;
+            this.pbExportPdf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbExportPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExportPdf.Image = global::FloriculturaImperial.Properties.Resources.pdf_icon;
+            this.pbExportPdf.Location = new System.Drawing.Point(687, 50);
+            this.pbExportPdf.Name = "pbExportPdf";
+            this.pbExportPdf.Size = new System.Drawing.Size(44, 33);
+            this.pbExportPdf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExportPdf.TabIndex = 11;
+            this.pbExportPdf.TabStop = false;
+            this.pbExportPdf.Click += new System.EventHandler(this.pbExportPdf_Click);
+            this.pbExportPdf.MouseLeave += new System.EventHandler(this.pbExportPdf_MouseLeave);
+            this.pbExportPdf.MouseHover += new System.EventHandler(this.pbExportPdf_MouseHover);
+            // 
+            // pbExportExcel
+            // 
+            this.pbExportExcel.BackColor = System.Drawing.Color.White;
+            this.pbExportExcel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExportExcel.Image = global::FloriculturaImperial.Properties.Resources.excel_icon1;
+            this.pbExportExcel.Location = new System.Drawing.Point(605, 48);
+            this.pbExportExcel.Name = "pbExportExcel";
+            this.pbExportExcel.Size = new System.Drawing.Size(42, 35);
+            this.pbExportExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExportExcel.TabIndex = 10;
+            this.pbExportExcel.TabStop = false;
+            this.pbExportExcel.Click += new System.EventHandler(this.pbExportExcel_Click);
+            this.pbExportExcel.MouseLeave += new System.EventHandler(this.pbExportExcel_MouseLeave);
+            this.pbExportExcel.MouseHover += new System.EventHandler(this.pbExportExcel_MouseHover);
+            // 
             // ucRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.dgvRelatorio);
             this.Controls.Add(this.pbExportSalvar);
             this.Controls.Add(this.pbExportPdf);
@@ -320,10 +336,10 @@
             this.Name = "ucRelatorio";
             this.Size = new System.Drawing.Size(846, 324);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExportSalvar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExportPdf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExportExcel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +366,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn QtdProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }

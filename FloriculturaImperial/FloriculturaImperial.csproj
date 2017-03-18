@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -54,13 +58,16 @@
   <ItemGroup>
     <Compile Include="Camadas\DAO\dFotos.cs" />
     <Compile Include="Camadas\DAO\dPlantas.cs" />
+    <Compile Include="Camadas\DAO\dRelatorio.cs" />
     <Compile Include="Camadas\DAO\dVendas.cs" />
     <Compile Include="Camadas\DAO\Util\duConexao.cs" />
     <Compile Include="Camadas\ENT\eFotos.cs" />
     <Compile Include="Camadas\ENT\ePlantas.cs" />
+    <Compile Include="Camadas\ENT\eRelatorio.cs" />
     <Compile Include="Camadas\ENT\eVendas.cs" />
     <Compile Include="Camadas\NEG\nFotos.cs" />
     <Compile Include="Camadas\NEG\nPlantas.cs" />
+    <Compile Include="Camadas\NEG\nRelatorio.cs" />
     <Compile Include="Camadas\NEG\nVendas.cs" />
     <Compile Include="Forms\fmPrincipal.cs">
       <SubType>Form</SubType>
@@ -101,6 +108,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +136,7 @@
     <Content Include="Banco\Tabelas\TB_PLANTAS.sql" />
     <Content Include="Banco\Tabelas\TB_VENDAS.sql" />
     <Content Include="Banco\Tabelas\TB_VENDAS_TOTAL.sql" />
+    <None Include="Resources\pesquisa.png" />
     <None Include="Resources\salva-icon.png" />
     <None Include="Resources\pdf-icon.png" />
     <None Include="Resources\excel-icon1.png" />
