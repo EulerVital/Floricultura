@@ -42,6 +42,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\Dlls\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
@@ -75,6 +76,24 @@
     <Compile Include="Forms\fmPrincipal.Designer.cs">
       <DependentUpon>fmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fmRelatoriosSalvos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fmRelatoriosSalvos.Designer.cs">
+      <DependentUpon>fmRelatoriosSalvos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\uc\uCestas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\uc\uCestas.Designer.cs">
+      <DependentUpon>uCestas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\uc\ucMontarCesta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\uc\ucMontarCesta.Designer.cs">
+      <DependentUpon>ucMontarCesta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\uc\ucRelatorio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +110,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\fmPrincipal.resx">
       <DependentUpon>fmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fmRelatoriosSalvos.resx">
+      <DependentUpon>fmRelatoriosSalvos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\uc\uCestas.resx">
+      <DependentUpon>uCestas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\uc\ucMontarCesta.resx">
+      <DependentUpon>ucMontarCesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\uc\ucRelatorio.resx">
       <DependentUpon>ucRelatorio.cs</DependentUpon>
@@ -123,6 +151,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Banco\Funcoes\FN_Split.sql" />
     <Content Include="Banco\Procedures\USP_DEL_PLANTA_FOTO.sql" />
     <Content Include="Banco\Procedures\USP_INS_FOTO_PLANTA.sql" />
     <Content Include="Banco\Procedures\USP_INS_PLANTAS.sql" />
@@ -136,6 +165,9 @@
     <Content Include="Banco\Tabelas\TB_PLANTAS.sql" />
     <Content Include="Banco\Tabelas\TB_VENDAS.sql" />
     <Content Include="Banco\Tabelas\TB_VENDAS_TOTAL.sql" />
+    <None Include="Resources\Sem título.ico" />
+    <None Include="Resources\titulo_cestas.png" />
+    <None Include="Resources\titulo_principal.png" />
     <None Include="Resources\pesquisa.png" />
     <None Include="Resources\salva-icon.png" />
     <None Include="Resources\pdf-icon.png" />
@@ -146,7 +178,6 @@
     <None Include="ImgApp\img_nao_disponivel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Banco\Funcoes\" />
     <Folder Include="Banco\Views\" />
   </ItemGroup>
   <ItemGroup>

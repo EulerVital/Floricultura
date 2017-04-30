@@ -10,12 +10,12 @@ namespace FloriculturaImperial.Camadas.NEG
 {
     public class nRelatorio
     {
-        public static bool insRelatoriosSalvos(int? id, string listaIds, bool? Excluido)
+        public static bool insRelatoriosSalvos(int? id, string listaIds, bool? Excluido, string Descricao)
         {
             try
             {
                 dRelatorio db = new dRelatorio();
-                return db.insRelatoriosSalvos(id, listaIds, Excluido);
+                return db.insRelatoriosSalvos(id, listaIds, Excluido, Descricao);
             }
             catch (Exception ex)
             {
@@ -23,7 +23,7 @@ namespace FloriculturaImperial.Camadas.NEG
             } 
         }
 
-        public List<eRelatorio> selRelatoriosSalvos(int? id, string listaIds, bool? Excluido)
+        public static List<eRelatorio> selRelatoriosSalvos(int? id, string listaIds, bool? Excluido)
         {
             try
             {

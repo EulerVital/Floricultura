@@ -227,7 +227,7 @@ namespace FloriculturaImperial.Camadas.DAO
             return vend;
         }
 
-        public List<eVendas> selRelatorioVendas(DateTime? dataAte, DateTime? dataDe, string nomeProd, int? qtdMaior, decimal? preco)
+        public List<eVendas> selRelatorioVendas(DateTime? dataAte, DateTime? dataDe, string nomeProd, int? qtdMaior, decimal? preco, string ids)
         {
             objSqlCom = new SqlCommand();
             objSqlConect = new SqlConnection();
@@ -243,6 +243,7 @@ namespace FloriculturaImperial.Camadas.DAO
             objSqlCom.Parameters.AddWithValue("@QtdProdutos", qtdMaior);
             objSqlCom.Parameters.AddWithValue("@DataDe", dataDe);
             objSqlCom.Parameters.AddWithValue("@DataAte", dataAte);
+            objSqlCom.Parameters.AddWithValue("@listaIds", ids);
 
 
             objSqlConect = con.abrirConexao();

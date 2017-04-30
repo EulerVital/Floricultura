@@ -14,6 +14,7 @@ using System.IO;
 using System.Reflection;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
+using Microsoft.VisualBasic;
 
 namespace FloriculturaImperial.Forms.uc
 {
@@ -27,7 +28,13 @@ namespace FloriculturaImperial.Forms.uc
         {
             InitializeComponent();
             caminho = Directory.GetCurrentDirectory().ToString().Replace("bin\\Debug","");
-            popularGridView(null, null, null, null, null);
+            popularGridView(null, null, null, null, null, null);
+        }
+
+        public ucRelatorio(string ids)
+        {
+            InitializeComponent();
+            popularGridView(null,null,null,null,null,ids);
         }
 
         #region Eventos
@@ -55,7 +62,7 @@ namespace FloriculturaImperial.Forms.uc
             pbExportPdf.BackColor = Color.White;
             pbExportPdf.BorderStyle = BorderStyle.FixedSingle;
         }
-
+        
         private void pbExportSalvar_MouseHover(object sender, EventArgs e)
         {
             pbExportSalvar.BackColor = Color.Gray;
@@ -161,6 +168,9 @@ namespace FloriculturaImperial.Forms.uc
 
             if(listaRelatorios.Count > 0)
             {
+                string Nome = string.Empty;
+                Nome = Interaction.InputBox("Digite um Descrição ou pressione OK para continuar...").ToUpper();
+
                 for(int i = 0; i < listaRelatorios.Count; i++)
                 {
                     if(i.Equals(listaRelatorios.Count-1))
@@ -169,19 +179,67 @@ namespace FloriculturaImperial.Forms.uc
                         listaIds += listaRelatorios[i].Id + ",";
                 }
 
-                if (nRelatorio.insRelatoriosSalvos(null, listaIds, null))
+                if (nRelatorio.insRelatoriosSalvos(null, listaIds, null, Nome))
                 {
                     MessageBox.Show("Relatório Salvo com sucesso.", "Secesso ao Salvar Relatório", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
 
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            string prod = null, dataDe = null, dataAte = null;
+            DateTime? DataDe = null, DataAte = null;
+            int? qtd = null;
+            decimal? preco = null;
+            decimal precoAux = 0;
+
+            if (!string.IsNullOrEmpty(txtPesquisar.Text))
+                prod = txtPesquisar.Text;
+            if (!mtbDataDe.Text.Equals("  /  /"))
+                dataDe = mtbDataDe.Text;
+            if (!mtbDataAte.Text.Equals("  /  /"))
+                dataAte = mtbDataAte.Text;
+            if (nudQtd.Value != 0)
+                qtd = int.Parse(nudQtd.Value.ToString());
+            if (!string.IsNullOrEmpty(txtPreco.Text))
+            {
+                if (decimal.TryParse(txtPreco.Text, out precoAux))
+                    preco = precoAux;
+                else
+                    MessageBox.Show("Erro ao converter preço","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                if(dataDe != null)
+                    DataDe = Convert.ToDateTime(dataDe);
+                if(dataAte != null)
+                    DataAte = Convert.ToDateTime(dataAte);
+            }
+            catch
+            {
+                MessageBox.Show("Data invalida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            popularGridView(DataDe, DataAte, qtd, preco, prod, null);
+                
+        }
+
+        private void btnVerSalvos_Click(object sender, EventArgs e)
+        {
+            fmRelatoriosSalvos c = new fmRelatoriosSalvos();
+            c.Visible = true;
+        }
+
         #endregion
 
         #region Métodos
-        private void popularGridView(DateTime? dataDe, DateTime? dataAte, int? qtd, decimal? preco, string nomeProd)
+        private void popularGridView(DateTime? dataDe, DateTime? dataAte, int? qtd, decimal? preco, string nomeProd, string ids)
         {
-            listaRelatorios = nVendas.selRelatorioVendas(dataDe, dataAte, nomeProd, qtd, preco);
+            dgvRelatorio.Rows.Clear();
+
+            listaRelatorios = nVendas.selRelatorioVendas(dataDe, dataAte, nomeProd, qtd, preco, ids);
 
             if(listaRelatorios.Count > 0)
             {
@@ -210,7 +268,7 @@ namespace FloriculturaImperial.Forms.uc
                     if (!string.IsNullOrEmpty(xmlElement.InnerText))
                         Produtos += xmlElement.InnerText + " / ";
                     i++;
-                }catch(Exception ex)
+                }catch
                 {
                     continua = false;
                 }

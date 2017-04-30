@@ -18,7 +18,7 @@ namespace FloriculturaImperial.Camadas.DAO
         duConexao con;
         SqlDataReader dr;
 
-        public bool insRelatoriosSalvos(int? id, string listaIds, bool? Excluido)
+        public bool insRelatoriosSalvos(int? id, string listaIds, bool? Excluido, string Descricao)
         {
             bool gravou = false;
             objSqlCom = new SqlCommand();
@@ -31,6 +31,10 @@ namespace FloriculturaImperial.Camadas.DAO
             objSqlCom.Parameters.AddWithValue("@Id", id);
             objSqlCom.Parameters.AddWithValue("@listaIds", listaIds);
             objSqlCom.Parameters.AddWithValue("@Excluido", Excluido);
+            if(string.IsNullOrEmpty(Descricao))
+                objSqlCom.Parameters.AddWithValue("@Descricao", null);
+            else
+                objSqlCom.Parameters.AddWithValue("@Descricao", Descricao);
 
             objSqlConect = con.abrirConexao();
             objSqlCom.Connection = objSqlConect;
@@ -64,7 +68,7 @@ namespace FloriculturaImperial.Camadas.DAO
             objSqlConect = new SqlConnection();
             con = new duConexao();
 
-            objSqlCom.CommandText = "USP_SEL_VENDAS";
+            objSqlCom.CommandText = "USP_SEL_RELATORIOS_SALVOS";
             objSqlCom.CommandType = CommandType.StoredProcedure;
 
             objSqlCom.Parameters.AddWithValue("@Id", id);
@@ -106,6 +110,7 @@ namespace FloriculturaImperial.Camadas.DAO
             relatorio.ListaIds = dr["listaIds"].ToString();
             relatorio.Excluido = Convert.ToBoolean(dr["Excluido"]);
             relatorio.Data = Convert.ToDateTime(dr["DataCriacao"]);
+            relatorio.Descricao = dr["Descricao"].ToString();
 
             return relatorio;
         }

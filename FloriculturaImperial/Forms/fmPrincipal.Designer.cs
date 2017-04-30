@@ -47,6 +47,11 @@
             this.QtdEstocada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PorcentEstocada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnVendas = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVendasGraficos = new System.Windows.Forms.Button();
+            this.btnVendaRelatorio = new System.Windows.Forms.Button();
+            this.btnVendasCad = new System.Windows.Forms.Button();
+            this.btnVendasTabGeral = new System.Windows.Forms.Button();
             this.pnCadVendas = new System.Windows.Forms.Panel();
             this.tbVendasCadQtd = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,6 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbVendasPrecoTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbImgVendaPlanta = new System.Windows.Forms.PictureBox();
             this.gbProdutos = new System.Windows.Forms.GroupBox();
             this.rbVendasBrinquedos = new System.Windows.Forms.RadioButton();
             this.rbVendasCestas = new System.Windows.Forms.RadioButton();
@@ -62,15 +68,15 @@
             this.lsVendasProdutos = new System.Windows.Forms.ListBox();
             this.pnTabGeral = new System.Windows.Forms.Panel();
             this.pnVendasUc = new System.Windows.Forms.Panel();
-            this.btnVendasGerarPdf = new System.Windows.Forms.Button();
-            this.btnVendaRelatorio = new System.Windows.Forms.Button();
-            this.btnVendasCad = new System.Windows.Forms.Button();
-            this.btnVendasTabGeral = new System.Windows.Forms.Button();
-            this.lbTitulo = new System.Windows.Forms.Label();
             this.pnPlantas = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnPlantaCons = new System.Windows.Forms.Button();
+            this.btnPlantaDeletar = new System.Windows.Forms.Button();
+            this.btnPlantaEditar = new System.Windows.Forms.Button();
+            this.btnPlantaCad = new System.Windows.Forms.Button();
             this.pnPlantasPrincipal = new System.Windows.Forms.Panel();
             this.pnPlantasImg = new System.Windows.Forms.Panel();
+            this.pbPlantaImg = new System.Windows.Forms.PictureBox();
             this.btnPlantaLimpaImg = new System.Windows.Forms.Button();
             this.btnPlantaInsImg = new System.Windows.Forms.Button();
             this.pnPlantasEditar = new System.Windows.Forms.Panel();
@@ -100,27 +106,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lsPlanta = new System.Windows.Forms.ListBox();
-            this.btnPlantaDeletar = new System.Windows.Forms.Button();
-            this.btnPlantaEditar = new System.Windows.Forms.Button();
-            this.btnPlantaCad = new System.Windows.Forms.Button();
             this.ofdImg = new System.Windows.Forms.OpenFileDialog();
-            this.pbImgVendaPlanta = new System.Windows.Forms.PictureBox();
-            this.pbPlantaImg = new System.Windows.Forms.PictureBox();
+            this.pnPrincinpal = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnBotoesPrincipais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabVendasGeral)).BeginInit();
             this.pnVendas.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnCadVendas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).BeginInit();
             this.gbProdutos.SuspendLayout();
             this.pnTabGeral.SuspendLayout();
             this.pnPlantas.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnPlantasPrincipal.SuspendLayout();
             this.pnPlantasImg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).BeginInit();
             this.pnPlantasEditar.SuspendLayout();
             this.gbPlantaEdtEspecial.SuspendLayout();
             this.pnPlantasCad.SuspendLayout();
             this.gbPlantasCadEspecial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnBotoesPrincipais
@@ -162,6 +168,7 @@
             resources.ApplyResources(this.btnCestas, "btnCestas");
             this.btnCestas.Name = "btnCestas";
             this.btnCestas.UseVisualStyleBackColor = false;
+            this.btnCestas.Click += new System.EventHandler(this.btnCestas_Click);
             // 
             // btnVendas
             // 
@@ -226,6 +233,7 @@
             resources.ApplyResources(this.Produtos, "Produtos");
             this.Produtos.Name = "Produtos";
             this.Produtos.ReadOnly = true;
+            this.Produtos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Preco
             // 
@@ -260,15 +268,55 @@
             // pnVendas
             // 
             this.pnVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnVendas.Controls.Add(this.panel1);
             this.pnVendas.Controls.Add(this.pnCadVendas);
             this.pnVendas.Controls.Add(this.pnTabGeral);
             this.pnVendas.Controls.Add(this.pnVendasUc);
-            this.pnVendas.Controls.Add(this.btnVendasGerarPdf);
-            this.pnVendas.Controls.Add(this.btnVendaRelatorio);
-            this.pnVendas.Controls.Add(this.btnVendasCad);
-            this.pnVendas.Controls.Add(this.btnVendasTabGeral);
             resources.ApplyResources(this.pnVendas, "pnVendas");
             this.pnVendas.Name = "pnVendas";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.Controls.Add(this.btnVendasGraficos);
+            this.panel1.Controls.Add(this.btnVendaRelatorio);
+            this.panel1.Controls.Add(this.btnVendasCad);
+            this.panel1.Controls.Add(this.btnVendasTabGeral);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // btnVendasGraficos
+            // 
+            this.btnVendasGraficos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            resources.ApplyResources(this.btnVendasGraficos, "btnVendasGraficos");
+            this.btnVendasGraficos.Name = "btnVendasGraficos";
+            this.btnVendasGraficos.UseVisualStyleBackColor = false;
+            // 
+            // btnVendaRelatorio
+            // 
+            this.btnVendaRelatorio.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            resources.ApplyResources(this.btnVendaRelatorio, "btnVendaRelatorio");
+            this.btnVendaRelatorio.Name = "btnVendaRelatorio";
+            this.btnVendaRelatorio.UseVisualStyleBackColor = false;
+            this.btnVendaRelatorio.Click += new System.EventHandler(this.btnVendaRelatorio_Click);
+            // 
+            // btnVendasCad
+            // 
+            this.btnVendasCad.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            resources.ApplyResources(this.btnVendasCad, "btnVendasCad");
+            this.btnVendasCad.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnVendasCad.Name = "btnVendasCad";
+            this.btnVendasCad.UseVisualStyleBackColor = false;
+            this.btnVendasCad.Click += new System.EventHandler(this.btnVendasCad_Click);
+            // 
+            // btnVendasTabGeral
+            // 
+            this.btnVendasTabGeral.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnVendasTabGeral.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            resources.ApplyResources(this.btnVendasTabGeral, "btnVendasTabGeral");
+            this.btnVendasTabGeral.Name = "btnVendasTabGeral";
+            this.btnVendasTabGeral.UseVisualStyleBackColor = false;
+            this.btnVendasTabGeral.Click += new System.EventHandler(this.btnTabVendasGeral_Click);
             // 
             // pnCadVendas
             // 
@@ -331,6 +379,13 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // pbImgVendaPlanta
+            // 
+            this.pbImgVendaPlanta.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
+            resources.ApplyResources(this.pbImgVendaPlanta, "pbImgVendaPlanta");
+            this.pbImgVendaPlanta.Name = "pbImgVendaPlanta";
+            this.pbImgVendaPlanta.TabStop = false;
+            // 
             // gbProdutos
             // 
             this.gbProdutos.Controls.Add(this.rbVendasBrinquedos);
@@ -382,55 +437,23 @@
             resources.ApplyResources(this.pnVendasUc, "pnVendasUc");
             this.pnVendasUc.Name = "pnVendasUc";
             // 
-            // btnVendasGerarPdf
-            // 
-            this.btnVendasGerarPdf.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            resources.ApplyResources(this.btnVendasGerarPdf, "btnVendasGerarPdf");
-            this.btnVendasGerarPdf.Name = "btnVendasGerarPdf";
-            this.btnVendasGerarPdf.UseVisualStyleBackColor = false;
-            // 
-            // btnVendaRelatorio
-            // 
-            this.btnVendaRelatorio.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            resources.ApplyResources(this.btnVendaRelatorio, "btnVendaRelatorio");
-            this.btnVendaRelatorio.Name = "btnVendaRelatorio";
-            this.btnVendaRelatorio.UseVisualStyleBackColor = false;
-            this.btnVendaRelatorio.Click += new System.EventHandler(this.btnVendaRelatorio_Click);
-            // 
-            // btnVendasCad
-            // 
-            this.btnVendasCad.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            resources.ApplyResources(this.btnVendasCad, "btnVendasCad");
-            this.btnVendasCad.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnVendasCad.Name = "btnVendasCad";
-            this.btnVendasCad.UseVisualStyleBackColor = false;
-            this.btnVendasCad.Click += new System.EventHandler(this.btnVendasCad_Click);
-            // 
-            // btnVendasTabGeral
-            // 
-            this.btnVendasTabGeral.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnVendasTabGeral.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            resources.ApplyResources(this.btnVendasTabGeral, "btnVendasTabGeral");
-            this.btnVendasTabGeral.Name = "btnVendasTabGeral";
-            this.btnVendasTabGeral.UseVisualStyleBackColor = false;
-            this.btnVendasTabGeral.Click += new System.EventHandler(this.btnTabVendasGeral_Click);
-            // 
-            // lbTitulo
-            // 
-            resources.ApplyResources(this.lbTitulo, "lbTitulo");
-            this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lbTitulo.Name = "lbTitulo";
-            // 
             // pnPlantas
             // 
             this.pnPlantas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnPlantas.Controls.Add(this.btnPlantaCons);
+            this.pnPlantas.Controls.Add(this.panel2);
             this.pnPlantas.Controls.Add(this.pnPlantasPrincipal);
-            this.pnPlantas.Controls.Add(this.btnPlantaDeletar);
-            this.pnPlantas.Controls.Add(this.btnPlantaEditar);
-            this.pnPlantas.Controls.Add(this.btnPlantaCad);
             resources.ApplyResources(this.pnPlantas, "pnPlantas");
             this.pnPlantas.Name = "pnPlantas";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel2.Controls.Add(this.btnPlantaCons);
+            this.panel2.Controls.Add(this.btnPlantaDeletar);
+            this.panel2.Controls.Add(this.btnPlantaEditar);
+            this.panel2.Controls.Add(this.btnPlantaCad);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
             // 
             // btnPlantaCons
             // 
@@ -439,6 +462,30 @@
             this.btnPlantaCons.Name = "btnPlantaCons";
             this.btnPlantaCons.UseVisualStyleBackColor = false;
             this.btnPlantaCons.Click += new System.EventHandler(this.btnPlantaCons_Click);
+            // 
+            // btnPlantaDeletar
+            // 
+            this.btnPlantaDeletar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            resources.ApplyResources(this.btnPlantaDeletar, "btnPlantaDeletar");
+            this.btnPlantaDeletar.Name = "btnPlantaDeletar";
+            this.btnPlantaDeletar.UseVisualStyleBackColor = false;
+            this.btnPlantaDeletar.Click += new System.EventHandler(this.btnPlantaDeletar_Click);
+            // 
+            // btnPlantaEditar
+            // 
+            this.btnPlantaEditar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            resources.ApplyResources(this.btnPlantaEditar, "btnPlantaEditar");
+            this.btnPlantaEditar.Name = "btnPlantaEditar";
+            this.btnPlantaEditar.UseVisualStyleBackColor = false;
+            this.btnPlantaEditar.Click += new System.EventHandler(this.btnPlantaEditar_Click);
+            // 
+            // btnPlantaCad
+            // 
+            this.btnPlantaCad.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            resources.ApplyResources(this.btnPlantaCad, "btnPlantaCad");
+            this.btnPlantaCad.Name = "btnPlantaCad";
+            this.btnPlantaCad.UseVisualStyleBackColor = false;
+            this.btnPlantaCad.Click += new System.EventHandler(this.btnPlantaCad_Click);
             // 
             // pnPlantasPrincipal
             // 
@@ -458,6 +505,13 @@
             this.pnPlantasImg.Controls.Add(this.pbPlantaImg);
             resources.ApplyResources(this.pnPlantasImg, "pnPlantasImg");
             this.pnPlantasImg.Name = "pnPlantasImg";
+            // 
+            // pbPlantaImg
+            // 
+            resources.ApplyResources(this.pbPlantaImg, "pbPlantaImg");
+            this.pbPlantaImg.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
+            this.pbPlantaImg.Name = "pbPlantaImg";
+            this.pbPlantaImg.TabStop = false;
             // 
             // btnPlantaLimpaImg
             // 
@@ -677,70 +731,50 @@
             this.lsPlanta.Name = "lsPlanta";
             this.lsPlanta.SelectedIndexChanged += new System.EventHandler(this.lsPlanta_SelectedIndexChanged);
             // 
-            // btnPlantaDeletar
-            // 
-            this.btnPlantaDeletar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            resources.ApplyResources(this.btnPlantaDeletar, "btnPlantaDeletar");
-            this.btnPlantaDeletar.Name = "btnPlantaDeletar";
-            this.btnPlantaDeletar.UseVisualStyleBackColor = false;
-            this.btnPlantaDeletar.Click += new System.EventHandler(this.btnPlantaDeletar_Click);
-            // 
-            // btnPlantaEditar
-            // 
-            this.btnPlantaEditar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            resources.ApplyResources(this.btnPlantaEditar, "btnPlantaEditar");
-            this.btnPlantaEditar.Name = "btnPlantaEditar";
-            this.btnPlantaEditar.UseVisualStyleBackColor = false;
-            this.btnPlantaEditar.Click += new System.EventHandler(this.btnPlantaEditar_Click);
-            // 
-            // btnPlantaCad
-            // 
-            this.btnPlantaCad.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            resources.ApplyResources(this.btnPlantaCad, "btnPlantaCad");
-            this.btnPlantaCad.Name = "btnPlantaCad";
-            this.btnPlantaCad.UseVisualStyleBackColor = false;
-            this.btnPlantaCad.Click += new System.EventHandler(this.btnPlantaCad_Click);
-            // 
             // ofdImg
             // 
             this.ofdImg.FileName = "Img";
             // 
-            // pbImgVendaPlanta
+            // pnPrincinpal
             // 
-            this.pbImgVendaPlanta.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
-            resources.ApplyResources(this.pbImgVendaPlanta, "pbImgVendaPlanta");
-            this.pbImgVendaPlanta.Name = "pbImgVendaPlanta";
-            this.pbImgVendaPlanta.TabStop = false;
+            resources.ApplyResources(this.pnPrincinpal, "pnPrincinpal");
+            this.pnPrincinpal.Name = "pnPrincinpal";
             // 
-            // pbPlantaImg
+            // pictureBox1
             // 
-            resources.ApplyResources(this.pbPlantaImg, "pbPlantaImg");
-            this.pbPlantaImg.Image = global::FloriculturaImperial.Properties.Resources.img_nao_disponivel;
-            this.pbPlantaImg.Name = "pbPlantaImg";
-            this.pbPlantaImg.TabStop = false;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::FloriculturaImperial.Properties.Resources.titulo_principal;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // fmPrincipal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnBotoesPrincipais);
             this.Controls.Add(this.pnVendas);
             this.Controls.Add(this.pnPlantas);
-            this.Controls.Add(this.lbTitulo);
+            this.Controls.Add(this.pnPrincinpal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "fmPrincipal";
             this.pnBotoesPrincipais.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabVendasGeral)).EndInit();
             this.pnVendas.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnCadVendas.ResumeLayout(false);
             this.pnCadVendas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).EndInit();
             this.gbProdutos.ResumeLayout(false);
             this.gbProdutos.PerformLayout();
             this.pnTabGeral.ResumeLayout(false);
             this.pnPlantas.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.pnPlantasPrincipal.ResumeLayout(false);
             this.pnPlantasImg.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).EndInit();
             this.pnPlantasEditar.ResumeLayout(false);
             this.pnPlantasEditar.PerformLayout();
             this.gbPlantaEdtEspecial.ResumeLayout(false);
@@ -749,10 +783,8 @@
             this.pnPlantasCad.PerformLayout();
             this.gbPlantasCadEspecial.ResumeLayout(false);
             this.gbPlantasCadEspecial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImgVendaPlanta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPlantaImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -767,11 +799,6 @@
         private System.Windows.Forms.DataGridView dgvTabVendasGeral;
         private System.Windows.Forms.Panel pnVendas;
         private System.Windows.Forms.Panel pnTabGeral;
-        private System.Windows.Forms.Button btnVendasGerarPdf;
-        private System.Windows.Forms.Button btnVendaRelatorio;
-        private System.Windows.Forms.Button btnVendasCad;
-        private System.Windows.Forms.Button btnVendasTabGeral;
-        private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Panel pnCadVendas;
         private System.Windows.Forms.ListBox lsVendasProdutos;
         private System.Windows.Forms.RadioButton rbVendasSimples;
@@ -797,9 +824,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox lsPlanta;
-        private System.Windows.Forms.Button btnPlantaDeletar;
-        private System.Windows.Forms.Button btnPlantaEditar;
-        private System.Windows.Forms.Button btnPlantaCad;
         private System.Windows.Forms.TextBox tbVendasCadQtd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnPlantasEditar;
@@ -822,8 +846,8 @@
         private System.Windows.Forms.PictureBox pbPlantaImg;
         private System.Windows.Forms.TextBox tbPlantaCadQtd;
         private System.Windows.Forms.TextBox tbPlantaCadPreco;
-        private System.Windows.Forms.Button btnPlantaCons;
         private System.Windows.Forms.RadioButton rbVendasBrinquedos;
+        private System.Windows.Forms.Panel pnVendasUc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Produtos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preco;
@@ -831,7 +855,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PorcentVendidas;
         private System.Windows.Forms.DataGridViewTextBoxColumn QtdEstocada;
         private System.Windows.Forms.DataGridViewTextBoxColumn PorcentEstocada;
-        private System.Windows.Forms.Panel pnVendasUc;
+        private System.Windows.Forms.Panel pnPrincinpal;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnVendasGraficos;
+        private System.Windows.Forms.Button btnVendaRelatorio;
+        private System.Windows.Forms.Button btnVendasCad;
+        private System.Windows.Forms.Button btnVendasTabGeral;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnPlantaCons;
+        private System.Windows.Forms.Button btnPlantaDeletar;
+        private System.Windows.Forms.Button btnPlantaEditar;
+        private System.Windows.Forms.Button btnPlantaCad;
     }
 }
 

@@ -59,12 +59,12 @@ namespace FloriculturaImperial.Camadas.NEG
             }
         }
 
-        public static List<eVendas> selRelatorioVendas(DateTime? dataAte, DateTime? dataDe, string nomeProd, int? qtdMaior, decimal? preco)
+        public static List<eVendas> selRelatorioVendas(DateTime? dataAte, DateTime? dataDe, string nomeProd, int? qtdMaior, decimal? preco, string ids)
         {
             try
             {
                 dVendas db = new dVendas();
-                return db.selRelatorioVendas(dataAte,dataDe,nomeProd,qtdMaior,preco);
+                return db.selRelatorioVendas(dataAte,dataDe,nomeProd,qtdMaior,preco, ids);
             }
             catch (Exception ex)
             {

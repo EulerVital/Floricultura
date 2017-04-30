@@ -100,6 +100,7 @@
             this.Produto.HeaderText = "Produto";
             this.Produto.Name = "Produto";
             this.Produto.ReadOnly = true;
+            this.Produto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Produto.ToolTipText = "Produto";
             this.Produto.Width = 200;
             // 

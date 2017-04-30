@@ -13,6 +13,7 @@ using FloriculturaImperial.Camadas.NEG;
 using System.Reflection;
 using System.Xml;
 using FloriculturaImperial.Forms.uc;
+using FloriculturaImperial.Forms;
 
 namespace FloriculturaImperial
 {
@@ -34,7 +35,7 @@ namespace FloriculturaImperial
             caminho = @"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\";
             tbVendasCadQtd.Text = "1";
             tbVendasCadQtd.Focus();
-
+            
             listaTodasPlantas = nPlantas.selPlantas(null);
             listaTodasFotos = nFotos.selFotos(null);
             checkesVendas();
@@ -112,7 +113,12 @@ namespace FloriculturaImperial
                                 if (listaFoto.Count == 1)
                                 {
                                     caminhoImg = listaFoto[0].Caminho;
-                                    pbImgVendaPlanta.Load(caminhoImg);
+                                    try
+                                    {
+                                        pbImgVendaPlanta.Load(caminhoImg);
+                                    }
+                                    catch {}
+                                    
                                 }else
                                 {
                                     pbImgVendaPlanta.Load(@"E:\Projetos\AnotacoesDeCasa\Aplicação\FloriculturaImperial\FloriculturaImperial\ImgApp\img_nao_disponivel.jpg");
@@ -208,6 +214,7 @@ namespace FloriculturaImperial
         private void btnVendas_Click(object sender, EventArgs e)
         {
             pnPlantas.Visible = false;
+            pnPrincinpal.Visible = false;
 
             pnVendas.Visible = true;
             checkesVendas();
@@ -413,6 +420,7 @@ namespace FloriculturaImperial
         private void btnPlantas_Click(object sender, EventArgs e)
         {
             pnVendas.Visible = false;
+            pnPrincinpal.Visible = false;
 
             pnPlantas.Visible = true;
             preencherLista(null);
@@ -705,7 +713,15 @@ namespace FloriculturaImperial
                     if (listaFotos.Count == 1)
                     {
                         caminho = listaFotos[0].Caminho;
-                        pbPlantaImg.Load(caminho);
+                        try
+                        {
+                            pbPlantaImg.Load(caminho);
+                        }
+                        catch
+                        {
+                            
+                        }
+                        
                     }
 
                     lsPlanta.SelectedItem = listaPlanta[0].Nome;
@@ -786,6 +802,19 @@ namespace FloriculturaImperial
 
 
         #endregion
+
+        #endregion
+
+        #region Eventos
+        private void btnCestas_Click(object sender, EventArgs e)
+        {
+            pnPrincinpal.Visible = true;
+            pnVendas.Visible = false;
+            pnPlantas.Visible = false;
+            uCestas cesta = new uCestas();
+            cesta.Dock = DockStyle.Fill;
+            pnPrincinpal.Controls.Add(cesta);
+        }
 
         #endregion
     }

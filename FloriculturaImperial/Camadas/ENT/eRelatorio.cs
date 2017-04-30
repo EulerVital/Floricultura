@@ -10,5 +10,7 @@ namespace FloriculturaImperial.Camadas.ENT
     {
         public string ListaIds { get; set; }
         public bool Excluido { get; set; }
+
+        public string Descricao { get; set; }
     }
 }

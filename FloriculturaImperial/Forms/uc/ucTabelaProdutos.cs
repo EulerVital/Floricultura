@@ -34,6 +34,5 @@ namespace FloriculturaImperial.Forms.uc
                     listaVendidas[i].QtdVendidas, listaVendidas[i].QtdEstocadas,listaVendidas[i].Data.ToString("dd/MM/yyyy"));
             }
         }
-
     }
 }
